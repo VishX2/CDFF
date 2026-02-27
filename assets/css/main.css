@@ -16048,3 +16048,21 @@ a, button, .slick-btn, .slick-arrow, .slick-dots li button, .form__input, .icon-
 .bd-color--primary {
     border-color: #33346a;
 }
+
+.branch-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.branch-list li {
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.branch-list li:hover {
+    background-color: #f2f6fb;
+    color: #014c8c;
+}

@@ -1,44 +1,90 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
- 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Sanders - Trusted Finance and Business Bootstrap 5 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicons -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/img/icon.png">
-
-    <!-- ************************* CSS Files ************************* -->
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-
-    <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/css/vendor.css">
-
-    <!-- Revoulation CSS -->
     <link rel="stylesheet" href="assets/css/revoulation.css">
-
-    <!-- style css -->
     <link id="main-style" rel="stylesheet" href="assets/css/main.css">
-
-    <!-- Style customizer (Remove these two lines please) -->
     <link rel="stylesheet" href="assets/css/style-customizer.css">
     <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <style>
+        .branch-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 24px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
+        .branch-list li {
+            cursor: pointer;
+        }
+
+        .network-highlight {
+            background: linear-gradient(135deg, #f6f9fc 0%, #eef4fb 100%);
+            border: 1px solid #d9e6f5;
+            border-left: 5px solid #014c8c;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 10px 24px rgba(1, 76, 140, 0.08);
+        }
+
+        .network-highlight__title {
+            margin: 0 0 14px;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .network-highlight__meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 0 16px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .network-highlight__meta li {
+            background: #ffffff;
+            border: 1px solid #d9e6f5;
+            border-radius: 999px;
+            color: #014c8c;
+            font-weight: 600;
+            padding: 8px 14px;
+        }
+
+        .network-highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .branch-list {
+                grid-template-columns: 1fr;
+            }
+
+            .network-highlight {
+                padding: 20px;
+            }
+
+            .network-highlight__title {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
-
 <body>
- 
-    <!-- Main Wrapper Start -->
     <div class="wrapper">
-        <!-- Header Start -->
         <header class="header">
             <div class="header__inner fixed-header">
-                
                 <div class="header__middle">
                     <div class="container">
                         <div class="row">
@@ -57,7 +103,7 @@
                                                 <i class="pe-7s-call"></i>
                                                 <div class="site-info__content">
                                                     <span class="site-info__title">0117 111 112</span>
-                                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk </a></span>
+                                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk</a></span>
                                                 </div>
                                             </div>
                                             <div class="site-info__item">
@@ -70,45 +116,24 @@
                                             <div class="site-info__item">
                                                 <i class="pe-7s-clock"></i>
                                                 <div class="site-info__content">
-                                                   <span class="site-info__title">8:30 AM - 5:00 PM</span>
-                                                    <span class="site-info__text">Monday to Saturday</span> 
+                                                    <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                                    <span class="site-info__text">Monday to Saturday</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="header__middle-right d-none d-lg-block">
                                         <ul class="social social-round text-end">
-                                            <li class="social__item">
-                                                <a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener">
-                                                    <i class="social__icon fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="social__item">
-                                                <a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener">
-                                                    <i class="social__icon fa fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="social__item">
-                                                <a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener">
-                                                    <i class="social__icon fa fa-instagram"></i>
-                                                </a>
-                                            </li>
+                                            <li class="social__item"><a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener"><i class="social__icon fa fa-facebook"></i></a></li>
+                                            <li class="social__item"><a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener"><i class="social__icon fa fa-linkedin"></i></a></li>
+                                            <li class="social__item"><a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener"><i class="social__icon fa fa-instagram"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="header__toolbar-wrap d-block d-lg-none">
                                         <div class="header__toolbar">
-                                            <a href="#searchForm" class="toolbar-btn">
-                                                <i class="fa fa-search"></i>
-                                            </a>
+                                            <a href="#searchForm" class="toolbar-btn"><i class="fa fa-search"></i></a>
                                             <a href="#offcanvasMenu" class="toolbar-btn menu-btn">
-                                                <div class="hamburger-icon">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
+                                                <div class="hamburger-icon"><span></span><span></span><span></span><span></span><span></span><span></span></div>
                                             </a>
                                         </div>
                                     </div>
@@ -124,180 +149,126 @@
                                 <div class="header__bottom-inner">
                                     <nav class="main-navigation">
                                         <ul class="mainmenu">
+                                            <li class="mainmenu__item menu-item-has-children"><a href="index.html" class="mainmenu__link"><span data-hover="Home" class="mm-text">Home</span></a></li>
                                             <li class="mainmenu__item menu-item-has-children">
-                                                <a href="index.html" class="mainmenu__link">
-                                                    <span data-hover="Home" class="mm-text">Home</span>
-                                                </a>
-                                        
-                                            </li>
-                                            
-                                            <li class="mainmenu__item menu-item-has-children">
-                                                <a href="about-us.html" class="mainmenu__link">
-                                                    <span data-hover="About Us" class="mm-text">About Us</span>
-                                                </a>
+                                                <a href="about-us.html" class="mainmenu__link"><span data-hover="About Us" class="mm-text">About Us</span></a>
                                                 <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="about-us.html">
-                                                            <span data-hover="Our Company" class="mm-text">Our Company</span>
-                                                        </a>
-                                                    </li>
-                                                    
-                                                    <li>
-                                                        <a href="honors-awards.html">
-                                                            <span data-hover="Honors &amp; Awards" class="mm-text">Honors &amp; Awards</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="team.html">
-                                                            <span data-hover="Our Team" class="mm-text">Our Team</span>
-                                                        </a>
-                                                    </li>
-                                                    
+                                                    <li><a href="about-us.html"><span data-hover="Our Company" class="mm-text">Our Company</span></a></li>
+                                                    <li><a href="honors-awards.html"><span data-hover="Honors &amp; Awards" class="mm-text">Honors &amp; Awards</span></a></li>
+                                                    <li><a href="team.html"><span data-hover="Our Team" class="mm-text">Our Team</span></a></li>
                                                 </ul>
                                             </li>
-
-                                            <li class="mainmenu__item menu-item-has-children">
-                                                <a href="our-services.html" class="mainmenu__link">
-                                                    <span data-hover="Services" class="mm-text">Services</span>
-                                                </a>
-                                            </li>
-
-                                            <li class="mainmenu__item menu-item-has-children">
-                                                <a href="news-details-gallery.html" class="mainmenu__link">
-                                                    <span data-hover="Gallery" class="mm-text">Gallery </span>
-                                                </a>
-                                                
-                                            </li>
-
-
-                                            <li class="mainmenu__item menu-item-has-children">
-                                                <a href="careers.html" class="mainmenu__link">
-                                                    <span data-hover="Careers" class="mm-text"> Careers</span>
-                                                </a>
-                                                 
-                                            </li>
-                                            <li class="mainmenu__item menu-item-has-children">
-                                                <a href="csr.html" class="mainmenu__link">
-                                                    <span data-hover="CSR" class="mm-text">CSR</span>
-                                                </a>
-                                              
-                                            </li>
-                                            <li class="mainmenu__item menu-item-has-children">
-                                                <a href="contact-us.html" class="mainmenu__link">
-                                                    <span data-hover="Contact Us" class="mm-text">Contact Us</span>
-                                                </a>
-                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children"><a href="our-services.html" class="mainmenu__link"><span data-hover="Services" class="mm-text">Services</span></a></li>
+                                            <li class="mainmenu__item menu-item-has-children"><a href="news-details-gallery.html" class="mainmenu__link"><span data-hover="Gallery" class="mm-text">Gallery</span></a></li>
+                                            <li class="mainmenu__item menu-item-has-children"><a href="careers.html" class="mainmenu__link"><span data-hover="Careers" class="mm-text">Careers</span></a></li>
+                                            <li class="mainmenu__item menu-item-has-children"><a href="csr.html" class="mainmenu__link"><span data-hover="CSR" class="mm-text">CSR</span></a></li>
+                                            <li class="mainmenu__item menu-item-has-children"><a href="contact-us.html" class="mainmenu__link"><span data-hover="Contact Us" class="mm-text">Contact Us</span></a></li>
                                         </ul>
                                     </nav>
-                                    <div class="header__toggle-search">
-                                        <a href="#searchForm" class="toolbar-btn">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
+                                    <div class="header__toggle-search"><a href="#searchForm" class="toolbar-btn"><i class="fa fa-search"></i></a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
         </header>
-        <!-- Header End -->
 
-        <!-- Page Title Area Start -->
         <section class="page-title-area bg-image ptb--80" data-bg-image="assets/img/bg/page_title_bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h1 class="page-title">Contact Us</h1>
-                    </div>
-                </div>
-            </div>
+            <div class="container"><div class="row"><div class="col-12 text-center"><h1 class="page-title">Contact Us</h1></div></div></div>
         </section>
-        <!-- Page Title Area End -->
-
-        <!-- Breadcrumb Area Start -->
         <div class="breadcrumb-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="current"><span>Contact Us</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div class="container"><div class="row"><div class="col-12"><ul class="breadcrumb"><li><a href="index.html">Home</a></li><li class="current"><span>Contact Us</span></li></ul></div></div></div>
         </div>
-        <!-- Breadcrumb Area End -->
-        
-        <!-- Main Content Wrapper Start -->
+
         <div class="main-content-wrapper">
-            <!-- News Area Start -->
             <div class="inner-content-area mt--55 mb--60">
                 <div class="container">
                     <div class="row mb--60">
                         <div class="col-lg-5 mb-md--45">
                             <h3 class="heading__tertiary mb--20">Get In Touch</h3>
                             <div class="contact-info mb--40">
-                                <p><i class="fa fa-map-marker"></i>350 Fifth Avenue, 34th floor <br>New York, NY 10118-3299 USA</p>
-                                <p><i class="fa fa-phone"></i> +1-212-290-4700</p>
-                                <p><i class="fa fa-fax"></i> +1-212-736-1300</p>
-                                <p><i class="fa fa-clock-o"></i> Mon – Fri : 9:00 – 18:00</p>
+                                <p><i class="fa fa-map-marker"></i><p>Head Office:<br>
+                                                                    Ceylon Development Funding Force Pvt Ltd (CDFF)<br>
+                                                                    No. 667, Colombo Road,
+                                                                    Ja-Ela, Sri Lanka</p>
+                                <p><i class="fa fa-phone"></i> +94 117 111 112</p>
+                                <p><i class="fa fa-envelope"></i> info@cdff.lk</p>
+                                <p><i class="fa fa-clock-o"></i> Mon - Sat : 8:30 AM - 5:00 PM</p>
                             </div>
                             <ul class="social social-round mb--50">
-                                <li class="social__item">
-                                    <a href="https://www.facebook.com" class="social__link" target="_blank" rel="noopener">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="https://www.plus.google.com" class="social__link" target="_blank" rel="noopener">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="https://www.twitter.com" class="social__link" target="_blank" rel="noopener">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
+                                <li class="social__item"><a href="https://www.facebook.com" class="social__link" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
+                                <li class="social__item"><a href="https://www.plus.google.com" class="social__link" target="_blank" rel="noopener"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="social__item"><a href="https://www.twitter.com" class="social__link" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
                             </ul>
-                            <div id="google-map"></div>
                         </div>
                         <div class="col-lg-7">
                             <h3 class="heading__tertiary mb--20">Contact Us</h3>
-                            <p class="mb--15">Would you like to speak to one of our financial advisers over the phone? Just submit your details and we’ll be in touch shortly. You can also e-mail us for any further concern.</p>
-
-                            <!-- Contact form Start Here -->
+                            <p class="mb--15">Would you like to speak to one of our financial advisers over the phone? Just submit your details and we'll be in touch shortly. You can also e-mail us for any further concern.</p>
                             <form class="form" action="mail.php" id="contact-form">
-                                <div class="form__group mb--20">
-                                    <input type="text" id="contact_name" name="contact_name" class="form__input" placeholder="Your name (required)">
-                                </div>
-                                <div class="form__group mb--20">
-                                    <input type="email" id="contact_email" name="contact_email" class="form__input" placeholder="Email Address (required)">
-                                </div>
-                                <div class="form__group mb--20">
-                                    <input type="text" id="contact_phone" name="contact_phone" class="form__input" placeholder="Your Phone">
-                                </div>
-                                <div class="form__group mb--20">
-                                    <textarea class="form__input form__input--textarea" id="contact_message" name="contact_message" placeholder="Your Message"></textarea>
-                                </div>
-                                <div class="form__group">
-                                    <button type="submut" class="btn">Submit</button>
-                                </div>
+                                <div class="form__group mb--20"><input type="text" id="contact_name" name="contact_name" class="form__input" placeholder="Your name (required)"></div>
+                                <div class="form__group mb--20"><input type="email" id="contact_email" name="contact_email" class="form__input" placeholder="Email Address (required)"></div>
+                                <div class="form__group mb--20"><input type="text" id="contact_phone" name="contact_phone" class="form__input" placeholder="Your Phone"></div>
+                                <div class="form__group mb--20"><textarea class="form__input form__input--textarea" id="contact_message" name="contact_message" placeholder="Your Message"></textarea></div>
+                                <div class="form__group"><button type="submit" class="btn">Submit</button></div>
                                 <div class="form__output"></div>
                             </form>
-                            <!-- Contact form end Here -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- News Area End -->
-        </div>
-        <!-- Main Content Wrapper End -->
 
-        <!-- Footer Start-->
+            <div class="inner-content-area mt--60 mb--60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 mb-md--40">
+                            <h3 class="heading__tertiary mb--20">Our Branch Network</h3>
+                            <ul class="branch-list">
+                                <li onclick="showBranch('Akkaraipattu', 7.2167, 81.8500)">Akkaraipattu</li>
+                                <li onclick="showBranch('Batticaloa', 7.7170, 81.7000)">Batticaloa</li>
+                                <li onclick="showBranch('Chenkaladi', 7.7833, 81.6000)">Chenkaladi</li>
+                                <li onclick="showBranch('Chunnakam', 9.7500, 80.0333)">Chunnakam</li>
+                                <li onclick="showBranch('Divulapitiya', 7.2333, 80.0167)">Divulapitiya</li>
+                                <li onclick="showBranch('Galle', 6.0535, 80.2210)">Galle</li>
+                                <li onclick="showBranch('Gampaha', 7.0873, 79.9990)">Gampaha</li>
+                                <li onclick="showBranch('Head Office - Ja Ela', 7.0746, 79.8910)">Head Office - Ja Ela</li>
+                                <li onclick="showBranch('Homagama', 6.8410, 80.0030)">Homagama</li>
+                                <li onclick="showBranch('Jaffna', 9.6615, 80.0255)">Jaffna</li>
+                                <li onclick="showBranch('Kalmunai', 7.4167, 81.8167)">Kalmunai</li>
+                                <li onclick="showBranch('Kekirawa', 8.0500, 80.6000)">Kekirawa</li>
+                                <li onclick="showBranch('Kiribathgoda', 6.9786, 79.9290)">Kiribathgoda</li>
+                                <li onclick="showBranch('Mannar', 8.9770, 79.9040)">Mannar</li>
+                                <li onclick="showBranch('Matale', 7.4675, 80.6234)">Matale</li>
+                                <li onclick="showBranch('Puttalam', 8.0362, 79.8283)">Puttalam</li>
+                                <li onclick="showBranch('Trincomalee', 8.5874, 81.2152)">Trincomalee</li>
+                                <li onclick="showBranch('Vavuniya', 8.7510, 80.4970)">Vavuniya</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-7"><div id="branch-map" style="width:100%; height:500px; border-radius:10px;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="inner-content-area mb--60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="network-highlight">
+                                <h3 class="network-highlight__title">Head Office &amp; Branch Network</h3>
+                                <ul class="network-highlight__meta">
+                                    <li>17 Branches</li>
+                                    <li>180 Employees</li>
+                                    <li>Island wide Presence</li>
+                                </ul>
+                                <p>Our Head Office serves as the central administrative and strategic hub of CDFF, overseeing branch operations, corporate governance, risk management, and institutional development initiatives across Sri Lanka.</p>
+                                <p>CDFF currently operates through 17 strategically located branches across Sri Lanka, supported by a workforce of 180 employees. This scale enables efficient portfolio management, decentralized customer access, and disciplined operational control, while maintaining strong governance and centralized oversight from the Head Office.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <footer class="footer">
             <div class="footer-top border-bottom-2 pt--70 pt-md--85 pb--45 pb-lg--40 pb-md--65">
                 <div class="container">
@@ -305,10 +276,8 @@
                         <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--45">
                             <div class="footer-widget">
                                 <div class="textwidget">
-                                    <a href="index.html" class="d-block">
-                                        <img src="assets/img/logo/logo_02.png" alt="Logo" class="footer-logo mb--30">
-                                    </a>
-                                    <p class="mb--40">CDFF is one of the world’s leading financial Service providor.</p>
+                                    <a href="index.html" class="d-block"><img src="assets/img/logo/logo_02.png" alt="Logo" class="footer-logo mb--30"></a>
+                                    <p class="mb--40">CDFF is one of the world's leading financial Service providor.</p>
                                     <p><i class="fa fa-map-marker"></i>No.667, Colombo Road,Ja-Ela, Sri Lanka</p>
                                     <p><i class="fa fa-phone"></i>(+94) 117 111 112</p>
                                     <p><i class="fa fa-envelope"></i><a href="mailto:info@cdff.lk">info@cdff.lk</a></p>
@@ -320,18 +289,7 @@
                             <div class="footer-widget">
                                 <h3 class="widget-title mb--20">Explore</h3>
                                 <ul class="widget-menu two-column-list">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="our-services.html">Services</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="contact-us.html">Contact Us</a></li>
-                                    <li><a href="#">Bonds</a></li>
-                                    <li><a href="#">Commodities</a></li>
-                                    <li><a href="#">Investments</a></li>
-                                    <li><a href="#">Retirement</a></li>
-                                    <li><a href="#">Stocks</a></li>
-                                    <li><a href="#">Trades</a></li>
+                                    <li><a href="index.html">Home</a></li><li><a href="about-us.html">About Us</a></li><li><a href="our-services.html">Services</a></li><li><a href="#">Testimonials</a></li><li><a href="news.html">News</a></li><li><a href="contact-us.html">Contact Us</a></li><li><a href="#">Bonds</a></li><li><a href="#">Commodities</a></li><li><a href="#">Investments</a></li><li><a href="#">Retirement</a></li><li><a href="#">Stocks</a></li><li><a href="#">Trades</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -347,19 +305,8 @@
                                 </div>
                                 <div class="textwidget">
                                     <ul class="social social-with-text two-column-list">
-                                        <li class="social__item">
-                                            <a class="social__link" href="https://www.facebook.com/CDFFPvtLtd" target="_blank" rel="noopener">
-                                                <i class="social__icon fa fa-facebook"></i>
-                                                <span class="social__text">Facebook</span>
-                                            </a>
-                                        </li>
-                                        
-                                        <li class="social__item">
-                                            <a class="social__link" href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" target="_blank" rel="noopener">
-                                                <i class="social__icon fa fa-linkedin"></i>
-                                                <span class="social__text">Linkedin</span>
-                                            </a>
-                                        </li>
+                                        <li class="social__item"><a class="social__link" href="https://www.facebook.com/CDFFPvtLtd" target="_blank" rel="noopener"><i class="social__icon fa fa-facebook"></i><span class="social__text">Facebook</span></a></li>
+                                        <li class="social__item"><a class="social__link" href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" target="_blank" rel="noopener"><i class="social__icon fa fa-linkedin"></i><span class="social__text">Linkedin</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -370,31 +317,15 @@
             <div class="footer-bottom ptb--30">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 text-center text-md-start">
-                            <p class="copyright-text">&copy; Sanders 2021 Made With <i class="fa fa-heart"></i> by <a href="https://hasthemes.com" target="_blank" rel="noopener">HasThemes</a></p>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <ul class="footer-menu">
-                                <li><a href="">Legal</a></li>
-                                <li><a href="">Sitemap</a></li>
-                                <li><a href="">Privacy Policy</a></li>
-                            </ul>
-                        </div>
+                        <div class="col-md-6 text-center text-md-start"><p class="copyright-text">&copy; Sanders 2021 Made With <i class="fa fa-heart"></i> by <a href="https://hasthemes.com" target="_blank" rel="noopener">HasThemes</a></p></div>
+                        <div class="col-md-6 text-center text-md-end"><ul class="footer-menu"><li><a href="">Legal</a></li><li><a href="">Sitemap</a></li><li><a href="">Privacy Policy</a></li></ul></div>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Footer End-->
 
-        <!-- Global Overlay Start -->
         <div class="fp-global-overlay"></div>
-        <!-- Global Overlay End -->
-
-        <!-- Global Overlay Start -->
         <a class="scroll-to-top" href=""><i class="fa fa-angle-up"></i></a>
-        <!-- Global Overlay End -->
-
-        <!-- Searchform Popup Start -->
         <div class="popup-search" id="searchForm">
             <div class="popup-search__body">
                 <a href="#" class="btn-close"><i class="fa fa-times"></i></a>
@@ -405,254 +336,23 @@
                 <p>* Type a keyword then press Enter</p>
             </div>
         </div>
-        <!-- Searchform Popup End -->
 
-        <!-- Color Variation Start -->
         <div class="style-customizer closed">
-            <div class="buy-button">
-                <a class="opener" href="#"><i class="fa fa-cog fa-spin"></i></a>
-            </div>
+            <div class="buy-button"><a class="opener" href="#"><i class="fa fa-cog fa-spin"></i></a></div>
             <div class="clearfix content-chooser">
                 <h3>Color Schemes</h3>
                 <p>Which Template color you want to use? Select from here.</p>
                 <ul class="styleChange clearfix">
-                    <li class="skin-default selected" data-color="#014c8c" data-style="main"></li>
-                    <li class="skin-chill" data-color="#13909C" data-style="main-chill"></li>
-                    <li class="skin-dixie" data-color="#eb9d16" data-style="main-dixie"></li>
-                    <li class="skin-dodger" data-color="#3794f3" data-style="main-dodger"></li>
-                    <li class="skin-froly" data-color="#f17283" data-style="main-froly"></li>
-                    <li class="skin-green" data-color="#37f396" data-style="main-green"></li>
-                    <li class="skin-lime" data-color="#c8f905" data-style="main-lime"></li>
-                    <li class="skin-nova" data-color="#4d2a4f" data-style="main-nova"></li>
-                    <li class="skin-phant" data-color="#103754" data-style="main-phant"></li>
-                    <li class="skin-plum" data-color="#863C80" data-style="main-plum"></li>
-                    <li class="skin-red" data-color="#F33837" data-style="main-red"></li>
-                    <li class="skin-sandal" data-color="#a57e6f" data-style="main-sandal"></li>
+                    <li class="skin-default selected" data-color="#014c8c" data-style="main"></li><li class="skin-chill" data-color="#13909C" data-style="main-chill"></li><li class="skin-dixie" data-color="#eb9d16" data-style="main-dixie"></li><li class="skin-dodger" data-color="#3794f3" data-style="main-dodger"></li><li class="skin-froly" data-color="#f17283" data-style="main-froly"></li><li class="skin-green" data-color="#37f396" data-style="main-green"></li><li class="skin-lime" data-color="#c8f905" data-style="main-lime"></li><li class="skin-nova" data-color="#4d2a4f" data-style="main-nova"></li><li class="skin-phant" data-color="#103754" data-style="main-phant"></li><li class="skin-plum" data-color="#863C80" data-style="main-plum"></li><li class="skin-red" data-color="#F33837" data-style="main-red"></li><li class="skin-sandal" data-color="#a57e6f" data-style="main-sandal"></li>
                 </ul>
             </div>
         </div>
-        <!-- Color Variation End -->
-
-
-
     </div>
-    <!-- Main Wrapper End -->
- 
 
-    <!-- ************************* JS Files ************************* -->
-
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxvP66_Xk1ts77oL2Z7EpDxhDD_jMg-D0"></script>
-    <script>
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 12,
-
-                scrollwheel: false,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.740610, -73.935242), // New York
-
-                // How you would like to style the map. 
-                // This is where you would paste any style found on
-
-                styles: [{
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#e9e9e9"
-                            },
-                            {
-                                "lightness": 17
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#f5f5f5"
-                            },
-                            {
-                                "lightness": 20
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 17
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 29
-                            },
-                            {
-                                "weight": 0.2
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 18
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.local",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 16
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#f5f5f5"
-                            },
-                            {
-                                "lightness": 21
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#dedede"
-                            },
-                            {
-                                "lightness": 21
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{
-                                "visibility": "on"
-                            },
-                            {
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 16
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                                "saturation": 36
-                            },
-                            {
-                                "color": "#333333"
-                            },
-                            {
-                                "lightness": 40
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.icon",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "featureType": "transit",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#f2f2f2"
-                            },
-                            {
-                                "lightness": 19
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                                "color": "#fefefe"
-                            },
-                            {
-                                "lightness": 20
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{
-                                "color": "#fefefe"
-                            },
-                            {
-                                "lightness": 17
-                            },
-                            {
-                                "weight": 1.2
-                            }
-                        ]
-                    }
-                ]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('google-map');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.740610, -73.935242),
-                map: map,
-                title: 'Lazio',
-                icon: "assets/img/icons/marker.png",
-                animation: google.maps.Animation.BOUNCE
-            });
-        }
-    </script>
-
-    <!-- jQuery JS -->
     <script src="assets/js/vendor.js"></script>
-
-    <!-- Main JS -->
     <script src="assets/js/main.js"></script>
-
-    <!-- REVOLUTION JS FILES -->
     <script src="assets/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>    
-
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
     <script src="assets/js/revoulation/revolution.extension.actions.min.js"></script>
     <script src="assets/js/revoulation/revolution.extension.carousel.min.js"></script>
     <script src="assets/js/revoulation/revolution.extension.kenburn.min.js"></script>
@@ -662,11 +362,54 @@
     <script src="assets/js/revoulation/revolution.extension.parallax.min.js"></script>
     <script src="assets/js/revoulation/revolution.extension.slideanims.min.js"></script>
     <script src="assets/js/revoulation/revolution.extension.video.min.js"></script>
-
-    <!-- REVOLUTION JS ACTIVATION FILE -->
     <script src="assets/js/revoulation.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        let branchMap;
+        let branchMarker;
+        let infoPopup;
 
+        function initBranchMap() {
+            const mapElement = document.getElementById('branch-map');
+            if (!mapElement || !window.L) return;
 
+            branchMap = L.map('branch-map', {
+                center: [7.8731, 80.7718],
+                zoom: 8,
+                scrollWheelZoom: false
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(branchMap);
+
+            const markerIcon = L.icon({
+                iconUrl: 'assets/img/icons/marker.png',
+                iconSize: [30, 40],
+                iconAnchor: [15, 40],
+                popupAnchor: [0, -35]
+            });
+
+            branchMarker = L.marker([7.8731, 80.7718], { icon: markerIcon }).addTo(branchMap);
+            infoPopup = L.popup();
+        }
+
+        function showBranch(name, lat, lng) {
+            if (!branchMap || !branchMarker || !infoPopup || !window.L) return;
+
+            const location = L.latLng(lat, lng);
+            branchMap.setView(location, 12);
+            branchMarker.setLatLng(location);
+            infoPopup
+                .setLatLng(location)
+                .setContent('<strong>' + name + '</strong>')
+                .openOn(branchMap);
+        }
+
+        window.initBranchMap = initBranchMap;
+        window.showBranch = showBranch;
+        document.addEventListener('DOMContentLoaded', initBranchMap);
+    </script>
 </body>
-
 </html>
