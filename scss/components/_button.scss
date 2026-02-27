@@ -1,0 +1,188 @@
+/*****************************
+24 - Components - Button
+*****************************/
+
+/*-- 24.00 - Global Button --*/
+
+.btn{
+	@extend %displayInlineBlock;
+	@extend %borderRadius;
+	@extend %fontSize16;
+	@extend %fontWeight700;
+	background-color: $primary-color;
+	color: $color-white;
+	border-width: 2px;
+	border-style: solid;
+	border-color: $primary-color;
+	padding: 0 20px;
+	height: 44px;
+	line-height: 40px;
+
+	i{
+		font-size: 12px;
+		margin-left: 10px;
+	}
+
+	&-2{
+		background-color: transparent;
+		color: $color-white;
+		border-color: $color-white;
+	}
+
+	&-fullwidth{
+		display: block;
+		width: 100%;
+	}
+	&-outline{
+		background-color: transparent;
+		color: $primary-color;
+	}
+	&-bd{
+		&-white{
+			border-color: $color-white;
+		}
+		&-gray{
+			border-color: $color-dove-gray;
+		}
+		&-alto{
+			border-color: $border-color;
+		}
+	}
+	&-bg{
+		&-white{
+			background-color: $color-white;
+			color: $primary-color;
+			border-color: $color-white;
+		}
+		&-transparent{
+			background-color: transparent;
+		}
+	}
+	&-no-bg{
+		padding: 0;
+		background-color: transparent;
+		border-width: 0px;
+		height: auto;
+		line-height: 1;
+		@extend %fontWeight400;
+	}
+	&-download{
+		width: 100%;
+		@extend %verticalFlexCenter;
+		@extend %justify-between;
+		span{
+			font-weight: 400;
+		}
+	}
+	&-color{
+		&-primary{
+			color: $primary-color;
+		}
+		&-white{
+			color: $color-white;
+		}
+		&-blue{
+			color: $color-blue;
+		}
+		&-gray{
+			color: $color-dove-gray;
+		}
+		&-body{
+			color: $body-color;
+		}
+		&-emp{
+			color: $color-emp;
+		}
+	}
+	&-submit{
+	    background-color: #dad8da;
+	    color: #515151;
+	    border: none;
+	}
+	&:hover{
+		background-color: transparent;
+		color: $primary-color;
+		border-color: $primary-color;
+	}
+	&-hover{
+		&-1{
+			&:hover{
+				color: $color-white;
+				border-color: $primary-color;
+				background-color: $primary-color;
+			}
+		}
+		&-2{
+			&:hover{
+				color: $color-white;
+				border-color: $color-white;
+			}
+		}
+		&-3{
+			&:hover{
+				background-color: $color-white;
+				border-color: $color-white;
+				color: $primary-color;
+			}
+		}
+		&-4{
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+	&-submit{
+		&:hover{
+			background-color: $primary-color;
+			color: $color-white;
+		}
+	}
+	&:focus{
+		box-shadow: 0 0 0 0 rgba(0,123,255,0);
+		outline: 0;
+	}
+}
+
+/*-- 24.01 - Read More Button --*/
+
+.read-more-btn {
+    padding-bottom: 1px;
+    display: inline-block;
+}
+.read-more-btn-2{
+	background-color: #ebe9eb;
+	color: #515151;
+	@extend %fontWeight700;
+	@extend %textUpper;
+	@extend %displayInlineBlock;
+	padding: 10px 16px;
+	line-height: 1.2;
+	&:hover{
+		background-color: #dad8da;
+		color: #515151;
+	}
+}
+
+/*-- 24.02 - Add to Cart Button --*/
+
+.add-to-cart-btn{
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    background: #888888;
+    border: none;
+    cursor: pointer;
+    @extend %textCenter;
+    @extend %borderRadius;
+    @extend %displayInlineBlock;
+    @extend %fontWeight300;
+    @extend %fontSize16;
+    @extend %white-color;
+    i{
+    	margin-left: 10px;
+    }
+    &:hover{
+    	@extend %primary-bg-color;
+    	@extend %white-color;
+    }
+}

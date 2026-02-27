@@ -1,0 +1,121 @@
+/*****************************
+33 - Components - Project
+*****************************/
+
+/*-- 33.00 - Project Filter --*/
+
+.project-filters{
+	button{
+		@extend %transparent-bg;
+		@extend %fontWeight600;
+		border: none;
+		padding: 0 0 10px 0;
+		border-bottom: 2px solid $border-color;
+		font-size: 16px;
+		color: $color-gray;
+		line-height: 1;
+		cursor: pointer;
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+		&.is-checked{
+			@extend %heading-color;
+			@extend %primary-border-color;
+		}
+	}
+}
+
+/*-- 33.01 - Project item --*/
+
+.project-item{
+	&__thumbnail{
+		@extend %posrelative;
+		margin-bottom: 20px;
+		img{
+			@extend %width100;
+		}
+	}
+	&__overlay{
+		@extend %directionalOverlay;
+		&:hover{
+			a{
+				@extend %directionalOverlayHover;
+			}
+		}
+		a{
+		    @extend %directionalOverlayLink;
+		}
+	}
+	&__title{
+	    font-size: 18px;
+	    line-height: 22px;
+	    @extend %fontWeight600;
+	    @extend %textCap;
+	}
+	&__categories{
+		a{
+			@extend %body-color;
+		}
+	}
+	&-2{
+		.project-item{
+			&__thumbnail{
+				margin-bottom: 10px;
+				img{
+					width: 100%;
+				}
+			}
+			&__title{
+			    @extend %fontWeight400;
+
+				a{
+				    overflow: hidden;
+				    height: 50px;
+				    line-height: 50px;
+				    padding: 0 25px 0 20px;
+					color: $color-shaft-1;
+				    @extend %fontSize16;
+				    @extend %borderRadius;
+				    @extend %athens-gray-bg;
+					@extend %posrelative;
+					@extend %displayBlock;
+					&:after{
+						@extend %fontAwesome;
+						content: '\f0da';
+						right: 20px;
+						top: 50%;
+					    font-size: 12px;
+					    margin-left: 10px;
+					    @include transform(translateY(-50%));
+					}
+					&:hover{
+						@extend %basetransition;
+						@extend %primary-bg-color;
+						@extend %white-color;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+/*-- 33.02 - Project Details --*/
+
+.project-details{
+	li{
+		border-bottom: 1px solid $border-color;
+		padding: 15px 0;
+		&:first-child{
+			border-top: 1px solid $border-color;
+		}
+	}
+}
+.project-share{
+	strong{
+		i{
+			padding-right: 4px;
+		}
+		padding-right: 15px;
+	}
+}

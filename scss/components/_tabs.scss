@@ -1,0 +1,97 @@
+/*****************************
+39 - Components - Tabs
+*****************************/
+
+/*-- 39.00 - Tab Style 01 --*/
+
+.tab-style-1{
+    padding: 30px;
+    border: 2px solid $color-dove-gray;
+    @extend %borderRadius;
+    .nav{
+        &-tabs{
+            border: none;
+        }
+        &-link{
+            padding: 0 0 15px 0;
+            line-height: 1;
+            border: none;
+            border-bottom: 2px solid #e3e3e3;
+            color: $color-dove-gray;
+            font-weight: 700;
+            @include border-radius(0);
+            @include transition(background .2s ease-in-out,color .2s ease-in-out,border .2s ease-in-out);
+            &.active{
+                border: none;
+            }
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+        }
+    }
+    .tab{
+        &-content{
+            padding: 20px 0 0;
+        }
+    }
+}
+
+/*-- 39.01 - Tab Style 02 --*/
+
+.tab-style-2{
+    padding: 30px;
+    border: 2px solid $border-color;
+    @extend %borderRadius;
+    .nav{
+        &-tabs{
+            border: none;
+            margin-bottom: 25px;
+        }
+        &-link{
+            padding: 8px 0;
+            color: #515151;
+            border: none;
+            @include border-radius(0);
+            border-bottom: 2px solid $border-color;
+            @extend %fontWeight700;
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+            &.active{
+                @extend %heading-color;
+                @extend %primary-border-color;
+            }
+        }
+    }
+}
+
+/*-- 39.02 - Tab Content --*/
+
+.tab-content {
+    width: 100%;
+    .tab-pane {
+        display: none;
+        height: 0;
+        max-width: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        &.active {
+        	display: block;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+            overflow: visible;
+        }
+    }
+}
+
+.tab-content{
+	.tab-pane{
+		&.active{
+			.zakas-product{
+				animation: zakasFadeInUp .5s linear .1s;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+/*****************************
+32 - Components - Progress Bar
+*****************************/
+
+.skill-progress{
+	&__item{
+		@extend %posrelative;
+		&:not(:last-child){
+			margin-bottom: 4rem;
+			@include breakpoint(large){
+				margin-bottom: 3rem;
+			}
+		}
+	}
+	&__title{
+		@extend %textUpper; 
+		@extend %fontSize14;
+		@extend %fontWeight700;
+		@extend %heading-color;
+		@extend %displayBlock;
+		margin-bottom: 5px;
+	}
+	.progress {
+	    overflow: visible;
+	}
+	.progress-bar {
+	    position: relative;
+		overflow: visible;
+		span { 
+			@extend %posabsolute;
+		    left: 0;
+		    top: 50%;
+		    @include transform(translateY(-50%));
+		    font-size: 14px;
+		    @include circleCenter(50);
+		    border-style: solid;
+		    border-width: 2px;
+		    z-index: 9;
+		    @extend %white-bg-color;
+		    @extend %primary-color;
+		}
+	}
+}

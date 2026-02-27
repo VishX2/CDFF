@@ -1,0 +1,58 @@
+/*****************************
+36 - Components - Slider
+*****************************/
+
+.single-slide{
+    height: calc(100vh - 220px);
+    @include breakpoint(medium){
+        height: calc(100vh - 150px);
+    }
+}
+
+.slider-content{
+    @include breakpoint(medium){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .slider{
+        &__heading{
+            font-size: 59px;
+            @extend %white-color;
+            letter-spacing: 2px;
+            line-height: 1;
+            @include breakpoint(large){
+                font-size: 55px;
+            }
+            @include breakpoint(medium){
+                font-size: 50px;
+            }
+            @include breakpoint(small){
+                font-size: 45px;
+            }
+            @include breakpoint(xsmall){
+                font-size: 35px;
+            }
+            &--main,
+            &--sub{
+                @extend %displayBlock;
+            }
+            &--sub{
+                font-size: 45px;
+                @include breakpoint(medium){
+                    font-size: 35px;
+                }
+            }
+        }
+        &-btn-group{
+            a{
+                &:not(:last-child){
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    p{
+        @extend %white-color;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,134 @@
+/*****************************
+35 - Components - Services
+*****************************/
+
+.services-item{
+	&__thumbnail{
+		@extend %posrelative;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+	}
+	&__overlay{
+		@extend %directionalOverlay;
+		&:hover{
+			a{
+				@extend %directionalOverlayHover;
+			}
+		}
+		a{
+		    @extend %directionalOverlayLink;
+		}
+	}
+	&__info{
+		@extend %posrelative;
+		padding-left: 50px;
+	}
+	&__icon{
+		@extend %posabsolute;
+		@extend %primary-color;
+		left: 0;
+		top: 0;
+	}
+	&__desc{
+		font-weight: 400;
+		line-height: 27px;
+	}
+	&-2{
+		.services-item{
+			&__icon{
+				@extend %posabsolute;
+				left: 20px;
+				bottom: 20px;
+				top: auto;
+			}
+			&__info{
+				padding-left: 0;
+			}
+		}
+	}
+	&-3{
+		@extend %flexbox;
+		.services-item{
+			&__icon{
+				@include flex-basis(70px);
+				max-width: 70px;
+				@extend %posrelative;
+			}
+			&__info{
+				@include flex-basis(calc(100% - 70px));
+				max-width: calc(100% - 70px);
+				padding-left: 20px;
+			}
+			&__title{
+			    font-size: 20px;
+			    color: #222222;
+			}
+		}
+	}
+	&-4{
+		padding: 25px 0 0 45px;
+		@include breakpoint(small){
+			padding: 20px 0 0 30px;
+		}
+		@extend %posrelative;
+		.services-item{
+			&__icon{
+				top: 0;
+				left: 0;
+			}
+			&__info{
+				@include border-radius(6px);
+				@include box-shadow(0px 0px 4px 0px rgba(0, 0, 0, 0.1));
+				padding: 40px 60px;
+				background: $border-color;
+				border: 1px solid #E9E9E9;background: linear-gradient(to top, #EEEEEE 0%, #FFFFFF 100%);
+    			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#FFFFFF', GradientType=0);
+				
+				@include breakpoint(medium){
+					padding: 30px 50px;
+				}
+				@include breakpoint(small){
+					padding: 20px 40px;
+				}
+			}
+			&__title{
+				font-size: 22px;
+				line-height: 1;
+				margin-bottom: 20px;
+				@include breakpoint(medium){
+					font-size: 20px;
+					margin-bottom: 15px;
+				}
+				@include breakpoint(small){
+					font-size: 18px;
+					margin-bottom: 10px;
+				}
+			}
+			&__desc{
+
+			}
+		}
+	}
+	&-5{
+		@extend %posrelative;
+		.services-item{
+			&__icon{
+				@extend %posabsolute;
+				left: 0;
+				top: 0;
+			}
+			&__info{
+
+			}
+			&__title{
+				font-size: 16px;
+				line-height: 1.8;
+			}
+			&__desc{
+				@extend %fontWeight300;
+			}
+		}
+	}
+}

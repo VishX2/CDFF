@@ -1,0 +1,217 @@
+/*****************************
+00 - Base - Global
+*****************************/
+  
+html{
+	// Default
+	height: 100%;
+	font-size: 62.5%; // 1rem = 10px
+
+	// Extra Large Device >1199 to <1499
+	@include breakpoint(xlarge){
+		font-size: 56.25%;  // 1rem = 9px
+	}
+
+	// Large Device >991 to <1200
+	@include breakpoint(large){
+		font-size: 50%;  // 1rem = 8px
+	}
+	
+	// Medium Device >767 to <992
+	@include breakpoint(medium){
+		font-size: 37.5%;  // 1rem = 6px
+	}
+	
+	// Small Device <768
+	@include breakpoint(small){
+		font-size: 31.25%;  // 1rem = 5px
+	} 
+}
+body{
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include breakpoint(large){
+		font-size: 14px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6{
+	letter-spacing: -0.8px;
+	padding-bottom: 3px;
+}
+h1 {
+    line-height: 38px;
+    padding-bottom: 5px;
+    @include breakpoint(medium){
+	    font-size: 32px;
+	    line-height: 34px;
+    }
+    @include breakpoint(small){
+	    font-size: 28px;
+	    line-height: 32px;
+    }
+}
+h2 {
+    line-height: 36px;
+    @include breakpoint(medium){
+	    font-size: 26px;
+	    line-height: 29px;
+    }
+    @include breakpoint(small){
+	    font-size: 24px;
+	    line-height: 26px;
+    }
+}
+h3 {
+    line-height: 30px;
+    @include breakpoint(medium){
+	    font-size: 20px;
+	    line-height: 26px;
+    }
+}
+h4 {
+    line-height: 24px;
+    padding-top: 1px;
+}
+h5 {
+    line-height: 21px;
+    padding-top: 1px;
+}
+h6 {
+    line-height: 18px;
+    padding-top: 18px;
+}
+p {
+    &:last-child{
+    	margin-bottom: 0;
+    }
+    &:only-child{
+    	margin-bottom: 0;
+    }
+}
+strong, b{
+	font-weight: bold;
+}
+a{
+	color: $heading-color;
+}
+// Base
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+figure{
+	margin: 0;
+}
+img{
+	max-width: 100%;
+}
+a, button{
+	@extend %basetransition; 
+}
+a:hover{
+	color: $primary-color;
+	text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+a, a:hover, a:focus, a:active, button, button:focus, input, select, textarea, .slick-slide{
+	outline: none;
+}
+
+.font-size-14{
+	font-size: 14px;
+}
+.font-size-16{
+	font-size: 16px;
+}
+
+/*****************************
+01 - Base - Typography
+*****************************/
+
+.heading{
+	&__primary{
+		font-size: 40px;
+		line-height: 44px;
+	    @include breakpoint(medium){
+		    font-size: 36px;
+		    line-height: 39px;
+	    }
+	    @include breakpoint(small){
+		    font-size: 32px;
+		    line-height: 36px;
+	    }
+	    @include breakpoint(xsmall){
+		    font-size: 30px;
+		    line-height: 34px;
+	    }
+	    &-2{
+	    	font-size: 48px;
+	    	line-height: 52px;
+	    	@include breakpoint(medium){
+		    	font-size: 40px;
+		    	line-height: 44px;
+	    	}
+	    	@include breakpoint(small){
+		    	font-size: 36px;
+		    	line-height: 40px;
+	    	}
+	    	@include breakpoint(small){
+		    	font-size: 32px;
+		    	line-height: 36px;
+	    	}
+	    }
+	}
+	&__secondary{
+		font-size: 32px;
+		line-height: 36px;
+		padding-bottom: 5px;
+	    @include breakpoint(medium){
+			font-size: 28px;
+			line-height: 32px;
+	    }
+	    @include breakpoint(small){
+			font-size: 26px;
+			line-height: 32px;
+			padding-bottom: 3px;
+	    }
+		&-2{
+			font-size: 34px;
+			line-height: 40px;
+		    @include breakpoint(medium){
+				font-size: 30px;
+				line-height: 37px;
+		    }
+		    @include breakpoint(small){
+				font-size: 28px;
+				line-height: 33px;
+				padding-bottom: 4px;
+		    }
+		}
+	}
+	&__tertiary{
+	    font-size: 22px;
+	    line-height: 30px;
+	    padding-bottom: 1px;
+	    @include breakpoint(medium){
+			font-size: 20px;
+			line-height: 28px;
+	    }
+	}
+}
+
+ 

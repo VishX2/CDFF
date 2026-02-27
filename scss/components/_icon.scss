@@ -1,0 +1,138 @@
+/*****************************
+28 - Components - Icon
+*****************************/
+
+ 
+.icon{
+	@extend %posrelative;
+	@extend %displayInlineBlock;
+	@extend %white-color;
+	i{
+		font-size: 20px;
+	}
+	&-rounded{
+		@include circleCenter(70);
+		z-index: 1;
+		@extend %white-color;
+		&.icon-big{
+			@include circleCenter(90);
+			@include breakpoint(medium){
+				@include circleCenter(70);
+			}
+			i{
+				@include circleCenter(90);
+				font-size: 33px;
+				@include breakpoint(medium){
+					@include circleCenter(70);
+					font-size: 28px;
+				}
+			}
+		}
+		&.icon-medium{
+			@include circleCenter(70);
+			@include breakpoint(medium){
+				@include circleCenter(70);
+			}
+			i{
+				@include circleCenter(70);
+				font-size: 33px;
+				@include breakpoint(medium){
+					@include circleCenter(70);
+					font-size: 28px;
+				}
+			}
+		}
+		i{
+			@include circleCenter(50);
+			font-size: 24px;
+			@extend %absCenter;
+			@extend %basetransition;
+		}
+	}
+	&-outline{
+		border-width: 2px;
+		border-style: solid;
+		border-color: $border-color-3;
+		@include circleCenter(74);
+		i{
+			line-height: 70px;
+			font-size: 28px;
+		}
+	}
+	&-square{
+		@include textBoxCenter(36, 36);
+		@extend %borderRadius;
+		@include border-radius(4px);
+		i{
+			line-height: 36px;
+		}
+
+		&.icon-big{
+			@include textBoxCenter(60, 60);
+			i{
+				line-height: 60px;
+			}
+		}
+	}
+	&-big{
+		@include textBoxCenter(90, 90);
+		i{
+			font-size: 28px;
+		}
+	}
+	&-small{
+		i{
+			font-size: 16px;
+		}
+	}
+	&-34{
+		font-size: 34px !important;
+	}
+	&-40{
+		font-size: 40px !important;
+	}
+	&-hover{
+		&-1{
+			&:hover{
+				i{
+					&.bg--white-light{
+						background-color: rgba(255, 255, 255, .2);
+					}
+				}
+			}
+		}
+		&-2{
+			&.icon-big{
+				i{
+					@include circleCenter(70);
+					font-size: 28px;
+					@include breakpoint(medium){
+						@include circleCenter(60);
+						font-size: 24px;
+					}
+				}
+			}
+			&:before{
+				@extend %pseudo;
+			    top: 0px;
+			    bottom: 0px;
+			    left: 0px;
+			    right: 0px;
+			    border-width: 2px;
+			    border-style: solid;
+			    border-color: #DDDDDD;
+			    border-radius: 50%;
+			    z-index: 1;
+			    opacity: 0;
+			    @extend %basetransition;
+			}
+			&:hover{
+				&:before{
+					opacity: 1;
+					clip: rect(0px, 150px, 150px, 20px);
+					animation: circleloading 1s infinite linear;
+				}
+			}
+		}
+	}
+}

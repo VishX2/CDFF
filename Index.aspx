@@ -1,0 +1,1239 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="CDFF2026.Index" %>
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CDFF - Ceylon Development Funding Force</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon1.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/icon1.png">
+
+    <!-- ************************* CSS Files ************************* -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+
+    <!-- Revoulation CSS -->
+    <link rel="stylesheet" href="assets/css/revoulation.css">
+
+    <!-- style css -->
+    <link id="main-style" rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Style customizer (Remove these two lines please) -->
+    <link rel="stylesheet" href="assets/css/style-customizer.css">
+    <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Main Wrapper Start -->
+    <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+            <div class="header__inner fixed-header">
+                <%--<div class="header__top d-none d-lg-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header__top-inner">
+                                    <div class="header__top-left">
+                                       Ceylon Development Funding Force (CDFF)
+                                    </div>
+                                    <div class="header__top-right">
+                                        <ul class="top-menu">
+                                            <li><a href="index.html">Buy Now</a></li>
+                                            <li><a href="login-register.html">Login &amp; Register</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>--%>
+                <div class="header__middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header__middle-inner">
+                                    <div class="header__middle-left">
+                                        <div class="logo">
+                                            <a href="index.html" class="logo--normal">
+                                                <img src="assets/img/logo/logo_01.png" alt="Logo">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="header__middle-middle d-none d-lg-block">
+                                        <div class="site-info">
+                                            <div class="site-info__item">
+                                                <i class="pe-7s-call"></i>
+                                                <div class="site-info__content">
+                                                    <span class="site-info__title">0117 111 112</span>
+                                                    <span class="site-info__text"><a href="mailto:info@example.com">info@cdff.lk</a></span>
+                                                </div>
+                                            </div>
+                                            <div class="site-info__item">
+                                                <i class="pe-7s-map-marker"></i>
+                                                <div class="site-info__content">
+                                                    <span class="site-info__title">No.667, Colombo Road,</span>
+                                                    <span class="site-info__text">Ja-Ela, Sri Lanka</span>
+                                                </div>
+                                            </div>
+                                            <div class="site-info__item">
+                                                <i class="pe-7s-clock"></i>
+                                                <div class="site-info__content">
+                                                   <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                                    <span class="site-info__text">Monday to Saturday</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="header__middle-right d-none d-lg-block">
+                                        <ul class="social social-round text-end">
+                                            <li class="social__item">
+                                                <a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener">
+                                                    <i class="social__icon fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener">
+                                                    <i class="social__icon fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener">
+                                                    <i class="social__icon fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="header__toolbar-wrap d-block d-lg-none">
+                                        <div class="header__toolbar">
+                                            <a href="#searchForm" class="toolbar-btn">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                            <a href="#offcanvasMenu" class="toolbar-btn menu-btn">
+                                                <div class="hamburger-icon">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom bg-gradient d-none d-lg-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header__bottom-inner">
+                                    <nav class="main-navigation">
+                                        <ul class="mainmenu">
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="index.aspx" class="mainmenu__link">
+                                                    <span data-hover="Home" class="mm-text">Home</span>
+                                                </a>
+                                            
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children position-static">
+                                                <a href="#" class="mainmenu__link">
+                                                    <span data-hover="About Us" class="mm-text">About Us</span>
+                                                </a>
+                                          
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="#" class="mainmenu__link">
+                                                    <span data-hover="Services" class="mm-text">Services</span>
+                                                </a>
+                                          
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="#" class="mainmenu__link">
+                                                    <span data-hover="Gallery" class="mm-text">Gallery</span>
+                                                </a>
+                                           
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="#" class="mainmenu__link">
+                                                    <span data-hover="Careers" class="mm-text">Careers</span>
+                                                </a>
+                                               
+                                            </li>
+
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="#" class="mainmenu__link">
+                                                    <span data-hover="CSR" class="mm-text">CSR</span>
+                                                </a>
+                                       
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="#" class="mainmenu__link">
+                                                    <span data-hover="Contact Us" class="mm-text">Contact Us</span>
+                                                </a>
+                                    
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="header__toggle-search">
+                                        <a href="#searchForm" class="toolbar-btn">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-menu-wrapper" id="offcanvasMenu">
+                <div class="offcanvas-menu-inner">
+                    <a href="" class="btn-close">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                    <nav class="offcanvas-navigation">
+                        <ul class="offcanvas-menu">
+                            <li class="menu-item-has-children active">
+                                <a href="#">
+                                    <span class="mm-text">Home</span>
+                                </a>
+                          
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">
+                                    <span class="mm-text">About Us</span>
+                                </a>
+                         
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="about-us.html">
+                                    <span class="mm-text">Services</span>
+                                </a>
+                          
+
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="our-services.html">
+                                    <span class="mm-text">Gallery</span>
+                                </a>
+                           
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">
+                                    <span class="mm-text">Careers</span>
+                                </a>
+                          
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">
+                                    <span class="mm-text">News</span>
+                                </a>
+                      
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">
+                                    <span class="mm-text">Contact Us</span>
+                                </a>
+                         
+                            </li>
+                       
+                        </ul>
+                        <div class="site-info vertical">
+                            <div class="site-info__item">
+                                <i class="pe-7s-call"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">0117 111 112</span>
+                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk</a></span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-map-marker"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">No.667, Colombo Road,</span>
+                                    <span class="site-info__text">Ja-Ela, Sri Lanka</span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-clock"></i>
+                                <div class="site-info__content">
+                                   <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                    <span class="site-info__text">Monday to Saturday</span> 
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="social social-round white-color">
+                            <li class="social__item">
+                                <a href="https://www.facebook.com" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-facebook"></i>
+                                </a>
+                            </li>
+                          <%--  <li class="social__item">
+                                <a href="https://www.plus.google.com" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-google-plus"></i>
+                                </a>
+                            </li>--%>
+                            <li class="social__item">
+                                <a href="https://www.twitter.com" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+        
+        <!-- Main Content Wrapper Start -->
+        <div class="main-content-wrapper">
+            <!-- Slider area  Start -->
+            <div class="slider-area mb--95">
+                <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="tm-01" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                    <!-- START REVOLUTION SLIDER 5.4.7 auto mode -->
+                    <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7">
+                        <ul>    <!-- SLIDE  -->
+                            <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/img/slider/slider01_2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img src="assets/img/slider/slider01_2.jpg"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption   tp-resizeme  font-weight-900" 
+                                     id="slide-1-layer-1" 
+                                     data-x="['left','left','left','left']" data-hoffset="['375','75','30','30']" 
+                                     data-y="['top','top','top','top']" data-voffset="['200','200','200','200']" 
+                                                data-fontsize="['70','70','70','50']"
+                                    data-lineheight="['70','70','70','50']"
+                                    data-width="none"
+                                    data-height="400"
+                                    data-whitespace="nowrap"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":1240,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 5; max-width: 400px; max-width: 400px; white-space: nowrap; font-size: 70px; line-height: 70px; font-weight: 900; color: rgba(34,34,34,1);font-family:Roboto;text-transform:capitalize;">Growth  <br/> and Fulfillment </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption tp-resizeme home-slider-text" 
+                                     id="slide-1-layer-2" 
+                                     data-x="['left','left','left','left']" data-hoffset="['375','75','30','30']" 
+                                     data-y="['top','top','top','top']" data-voffset="['350','350','350','350']" 
+                                                data-fontsize="['22','20','20','16']"
+                                    data-lineheight="['36','36','36','24']"
+                                    data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+                                    data-visibility="['on','on','on','off']"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":970,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 6; white-space: nowrap; font-size: 22px; line-height: 36px; font-weight: 400; color: rgba(102,102,102,1);font-family:Roboto;">Encouraging Living Standard all people <br/> to enable you & your business to keep up </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <a href="our-services.html" class="tp-caption tm-btn3 rev-btn home-slider-btn  tp-resizeme  primary_bgcolor primary_bdcolor" 
+                                     id="slide-1-layer-4" 
+                                     data-x="['left','left','left','left']" data-hoffset="['375','75','30','30']" 
+                                     data-y="['top','top','top','top']" data-voffset="['440','440','440','350']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+                                    data-responsive_offset="on" 
+                                    data-frames='[{"from":"x:-50px;opacity:0;","speed":750,"to":"o:1;","delay":1490,"ease":"Power3.easeInOut"},{"delay":"wait","speed":200,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(55,105,181,1);bg:transparent;bw:2px 2px 2px 2px;"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[14,14,14,14]"
+                                    data-paddingright="[24,24,24,24]"
+                                    data-paddingbottom="[14,14,14,14]"
+                                    data-paddingleft="[24,24,24,24]"
+
+                                    style="z-index: 7; white-space: nowrap; color: rgba(255,255,255,1);text-transform:capitalize;background-color:rgba(55,105,181,1);border-color:rgba(55,105,181,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Financial Services <i class="fa fa-caret-right"></i> </a>
+
+                                <!-- LAYER NR. 4 -->
+                                <a href="#" class="tp-caption tm-btn4 rev-btn home-slider-btn home-slider-btn-right tp-resizeme  primary_color" 
+                                     id="slide-1-layer-5" 
+                                     data-x="['left','left','left','left']" data-hoffset="['590','290','240','240']" 
+                                     data-y="['top','top','top','top']" data-voffset="['440','440','440','350']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+
+                                    data-frames='[{"from":"x:50px;opacity:0;","speed":750,"to":"o:1;","delay":1530,"ease":"Power2.easeInOut"},{"delay":"wait","speed":200,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(55,105,181,1);bg:transparent;bc:rgba(55,105,181,1);bw:2px 2px 2px 2px;"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[14,14,14,14]"
+                                    data-paddingright="[24,24,24,24]"
+                                    data-paddingbottom="[14,14,14,14]"
+                                    data-paddingleft="[24,24,24,24]"
+
+                                    style="z-index: 8; white-space: nowrap; color: rgba(55,105,181,1);text-transform:capitalize;background-color:rgba(255,255,255,1);border-color:rgba(255,255,255,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Join with Us Now  <i class="fa fa-caret-right"></i> </a>
+
+                                <!-- LAYER NR. 5 -->
+                                <div class="tp-caption   tp-resizeme" 
+                                     id="slide-1-layer-6" 
+                                     data-x="['center','center','center','center']" data-hoffset="['7','7','7','7']" 
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['35','35','35','35']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1530,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 9; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255,255,255,1);"> </div>
+                            </li>
+                            <!-- SLIDE  -->
+                            <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/img/slider/slider01_3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img src="assets/img/slider/slider01_3.jpg"  alt="Slider Image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 6 -->
+                                <div class="tp-caption   tp-resizeme  font-weight-900" 
+                                     id="slide-2-layer-1" 
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                     data-y="['top','top','top','top']" data-voffset="['200','200','200','200']" 
+                                                data-fontsize="['70','70','70','50']"
+                                    data-lineheight="['70','70','70','50']"
+                                    data-width="none"
+                                    data-height="400"
+                                    data-whitespace="nowrap"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1240,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['center','center','center','center']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 10; max-width: 400px; max-width: 400px; white-space: nowrap; font-size: 70px; line-height: 70px; font-weight: 900; color: rgba(255,255,255,1);font-family:Roboto;text-transform:capitalize;">Nurtures a skilled, committed workforce  <br/>and supports stakeholder progress. </div>
+
+                                <!-- LAYER NR. 7 -->
+                                <div class="tp-caption home-slider-text  tp-resizeme" 
+                                     id="slide-2-layer-2" 
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                     data-y="['top','top','top','top']" data-voffset="['350','350','350','350']" 
+                                                data-fontsize="['22','22','20','16']"
+                                    data-width="none"
+                                    data-height="100"
+                                    data-whitespace="nowrap"
+                                    data-visibility="['on','on','on','off']"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":970,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['center','center','center','center']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 11; max-width: 100px; max-width: 100px; white-space: nowrap; font-size: 22px; line-height: 36px; font-weight: 400; color: rgba(255,255,255,1);font-family:Roboto;">Builds trusted   &amp; relationships <br> and maintains ethical practices. </div>
+
+                                <!-- LAYER NR. 8 -->
+                                <a href="#" class="tp-caption tm-btn3 rev-btn home-slider-btn tp-resizeme  primary_bgcolor primary_bdcolor" 
+                                     id="slide-2-layer-4" 
+                                     data-x="['center','center','center','center']" data-hoffset="['-110','-110','-110','-125']" 
+                                     data-y="['top','top','top','top']" data-voffset="['440','440','440','350']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+
+                                    data-frames='[{"from":"x:-50px;opacity:0;","speed":880,"to":"o:1;","delay":1490,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(55,105,181,1);bg:transparent;bw:2px 2px 2px 2px;"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[14,14,14,14]"
+                                    data-paddingright="[24,24,24,24]"
+                                    data-paddingbottom="[14,14,14,14]"
+                                    data-paddingleft="[24,24,24,24]"
+
+                                    style="z-index: 12; white-space: nowrap; color: rgba(255,255,255,1);text-transform:capitalize;background-color:rgba(55,105,181,1);border-color:rgba(55,105,181,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Grow with Us <i class="fa fa-caret-right"></i> </a>
+
+                                <!-- LAYER NR. 9 -->
+                                <a href="our-services.html" class="tp-caption tm-btn4 rev-btn home-slider-btn home-slider-btn-right-2 tp-resizeme  primary_color" 
+                                     id="slide-2-layer-5" 
+                                     data-x="['center','center','center','center']" data-hoffset="['110','110','110','105']" 
+                                     data-y="['top','top','top','top']" data-voffset="['440','440','440','350']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"x:50px;opacity:0;","speed":750,"to":"o:1;","delay":1530,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(55,105,181,1);bg:transparent;bc:rgba(55,105,181,1);bw:2px 2px 2px 2px;"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[14,14,14,14]"
+                                    data-paddingright="[24,24,24,24]"
+                                    data-paddingbottom="[14,14,14,14]"
+                                    data-paddingleft="[24,24,24,24]"
+
+                                    style="z-index: 13; white-space: nowrap; color: rgba(55,105,181,1);text-transform:capitalize;background-color:rgba(255,255,255,1);border-color:rgba(255,255,255,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Succeed With Finance+  <i class="fa fa-caret-right"></i> </a>
+                            </li>
+                            <!-- SLIDE  -->
+                            <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/img/slider/slider01_4.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img src="assets/img/slider/slider01_4.jpg"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 10 -->
+                                <div class="tp-caption   tp-resizeme  font-weight-900" 
+                                     id="slide-3-layer-1" 
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                     data-y="['top','top','top','top']" data-voffset="['180','180','200','260']" 
+                                                data-fontsize="['70','70','50','30']"
+                                    data-lineheight="['70','70','50','30']"
+                                    data-width="none"
+                                    data-height="100"
+                                    data-whitespace="nowrap"
+                                    data-visibility="['on','on','on','off']"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1240,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 14; max-width: 100px; max-width: 100px; white-space: nowrap; font-size: 70px; line-height: 70px; font-weight: 900; color: rgba(255,255,255,1);font-family:Roboto;text-transform:capitalize;">Your Journey. Our Experience </div>
+
+                                <!-- LAYER NR. 11 -->
+                                <div class="tp-caption  home-slider-text tp-resizeme" 
+                                     id="slide-3-layer-2" 
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                     data-y="['top','top','top','top']" data-voffset="['280','280','280','280']" 
+                                                data-fontsize="['20','18','14','14']"
+                                    data-width="none"
+                                    data-height="100"
+                                    data-whitespace="nowrap"
+                                    data-visibility="['on','on','on','off']"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":970,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 15; max-width: 100px; max-width: 100px; white-space: nowrap; font-size: 20px; line-height: 36px; font-weight: 400; color: rgba(255,255,255,1);font-family:Roboto;">Ensures employees and clients are satisfied and engaged. </div>
+
+                                <!-- LAYER NR. 12 -->
+                                <div class="tp-caption   tp-resizeme  font-weight-900" 
+                                     id="slide-3-layer-6" 
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                     data-y="['top','top','top','top']" data-voffset="['180','180','200','200']" 
+                                                data-fontsize="['70','70','50','50']"
+                                    data-lineheight="['70','70','50','50']"
+                                    data-width="none"
+                                    data-height="['100','100','100','300']"
+                                    data-whitespace="nowrap"
+                                    data-visibility="['off','off','off','on']"
+                         
+                                    data-type="text" 
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":1240,"to":"o:1;","delay":500,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                                    data-textAlign="['center','center','center','center']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+
+                                    style="z-index: 16; max-width: 100px; max-width: 100px; white-space: nowrap; font-size: 70px; line-height: 70px; font-weight: 900; color: rgba(255,255,255,1);font-family:Roboto;text-transform:capitalize;">Your Journey<br/>Our Experience </div>
+
+                                <!-- LAYER NR. 13 -->
+                                <a href="our-services.html" class="tp-caption tm-btn3 rev-btn home-slider-btn tp-resizeme  primary_bgcolor primary_bdcolor" 
+                                     id="slide-3-layer-4" 
+                                     data-x="['center','center','center','center']" data-hoffset="['-95','-95','-95','-95']" 
+                                     data-y="['top','top','top','top']" data-voffset="['350','350','350','350']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"x:-50px;opacity:0;","speed":880,"to":"o:1;","delay":1490,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(55,105,181,1);bg:transparent;bw:2px 2px 2px 2px;"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[14,14,14,14]"
+                                    data-paddingright="[24,24,24,24]"
+                                    data-paddingbottom="[14,14,14,14]"
+                                    data-paddingleft="[24,24,24,24]"
+
+                                    style="z-index: 17; white-space: nowrap; color: rgba(255,255,255,1);text-transform:capitalize;background-color:rgba(55,105,181,1);border-color:rgba(55,105,181,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Your Services <i class="fa fa-caret-right"></i> </a>
+
+                                <!-- LAYER NR. 14 -->
+                                <a href="#" class="tp-caption tm-btn4 rev-btn home-slider-btn home-slider-btn-right-2  tp-resizeme  primary_color" 
+                                     id="slide-3-layer-5" 
+                                     data-x="['center','center','center','center']" data-hoffset="['95','95','95','95']" 
+                                     data-y="['top','top','top','top']" data-voffset="['350','350','350','350']" 
+                                                data-width="none"
+                                    data-height="none"
+                                    data-whitespace="nowrap"
+                                    data-responsive_offset="on" 
+
+                                    data-frames='[{"from":"x:50px;opacity:0;","speed":750,"to":"o:1;","delay":1530,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(55,105,181,1);bg:transparent;bc:rgba(55,105,181,1);bw:2px 2px 2px 2px;"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[14,14,14,14]"
+                                    data-paddingright="[24,24,24,24]"
+                                    data-paddingbottom="[14,14,14,14]"
+                                    data-paddingleft="[24,24,24,24]"
+
+                                    style="z-index: 18; white-space: nowrap; color: rgba(55,105,181,1);text-transform:capitalize;background-color:rgba(255,255,255,1);border-color:rgba(255,255,255,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Contact Us Today  <i class="fa fa-caret-right"></i> </a>
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer" style="height: 5px; background: rgba(0,0,0,0.15);"></div>   
+                    </div>
+                </div><!-- END REVOLUTION SLIDER -->
+            </div>
+            <!-- Slider area  End -->
+
+            <!-- Core Value area  Start -->
+            <section class="core-value-area mb--95 mb-sm--85">
+                <div class="container">
+                    <div class="row mb--35 mb-md--25">
+                        <div class="col-12 text-center">
+                            <h2>Our Core Values</h2>
+                            <p class="max-w-md-70 max-w-xs-95 mx-auto">Supporting Sri Lanka’s economic Development through Fulfilled and committed workforce.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                   
+                        <div class="col-md-4 text-center mb-sm--40">
+                            <div class="icon icon-rounded icon-big icon-hover-2">
+                                <i class="pe-7s-news-paper bg--primary"></i>
+                            </div>
+                            <h3 class="heading__tertiary mt--10 mt-md--0 mb--10">Vision</h3>
+                            <p class="max-w-sm-70 max-w-xs-95 mx-auto">Supporting Sri Lanka’s economic Development through Fulfilled and committed workforce. </p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="icon icon-rounded icon-big icon-hover-2">
+                                <i class="pe-7s-cup bg--primary"></i>
+                            </div>
+                            <h3 class="heading__tertiary mt--10 mt-md--0 mb--10">Mission</h3>
+                            <p class="max-w-sm-70 max-w-xs-95 mx-auto">To provide sustainable financial solutions cultivate a committed workforce, and build trusted relationships that drive growth of all stakeholders.</p>
+                        </div>
+                             <div class="col-md-4 text-center mb-sm--40">
+                            <div class="icon icon-rounded icon-big icon-hover-2">
+                                <i class="pe-7s-culture bg--primary"></i>
+                            </div>
+                            <h3 class="heading__tertiary mt--10 mt-md--0 mb--10">Values</h3>
+                            <p class="max-w-sm-70 max-w-xs-95 mx-auto">C – “Commitment”. Drives dedication to sustainable financial solutions and stakeholder  growth.<br />D – “Development” Nurtures a skilled, committed workforce and supports stakeholder progress.<br />F – “Fulfillment” - Ensures employees and clients are satisfied and engaged.<br />F – “Fairness” - Builds trusted relationships and maintains ethical practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Core Value area  End -->
+
+            <!-- About Us area Start -->
+            <section class="about-us-area mb--95">
+                <div class="container-fluid p-0">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div class="row g-0 justify-content-center align-items-center bg-color h-100 pt--75 pb--80 plr--35" data-bg-color="#33346a">
+                                <div class="col-xl-7 col-md-12">
+                                    <h2 class="color--white mb--20">About Us</h2>
+                                    <p class="color--white mb--20">
+                                    Ceylon Development Funding Force - CDFF is one of the Sri Lanka’s leading financial service Provider. We work with clients to help them have a thorough look about their financial situations, make better decisions, get those decisions translated quickly into actions and sustain the momentum into the future.</p>
+                                    <a href="#" class="btn btn-bg-white btn-hover-2">Read More <i class="fa fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <figure class="image-with-video-btn h-100">
+                                <div class="bg-image bg-padding-sm h-100" data-bg-image="assets/img/bg/home02_i2.jpg"></div>
+                                <a href="https://www.youtube.com/watch?v=Rp19QD2XIGM" class="video-popup">
+                                    <img src="assets/img/icons/home01_play.png" alt="video btn">
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Us area End -->
+
+            <!-- Projects Area Start -->
+            <section class="projects-area mb--100">
+                <div class="container">
+                    <div class="row mb--45">
+                        <div class="col-12 text-center">
+                            <h2>Our Services</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="fp-element-carousel slick-dot-mb-30 slick-dot-style-2"
+                            data-slick-options='{
+                                "spaceBetween": 10,
+                                "slidesToShow": 4,
+                                "slidesToScroll": 1,
+                                "swipeToSlide": true,
+                                "infinite": true,
+                                "dots": true
+                            }'
+                            data-slick-responsive= '[
+                                {"breakpoint":1199, "settings": {
+                                    "slidesToShow": 3
+                                }},
+                                {"breakpoint":991, "settings": {
+                                    "slidesToShow": 2
+                                }},
+                                {"breakpoint":767, "settings": {
+                                    "slidesToShow": 1
+                                }}
+                            ]'>
+                                <div class="item">
+                                    <div class="project-item-2">
+                                        <figure class="project-item__thumbnail">
+                                            <img src="assets/img/project/project1-285x200.jpg" alt="Project">
+                                        </figure>
+                                        <div class="project-item__info">
+                                            <h3 class="project-item__title"><a href="#">Motor Loans</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="project-item-2">
+                                        <figure class="project-item__thumbnail">
+                                            <img src="assets/img/project/project2-285x200.jpg" alt="Project">
+                                        </figure>
+                                        <div class="project-item__info">
+                                            <h3 class="project-item__title"><a href="#">Mortgage Loans</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="project-item-2">
+                                        <figure class="project-item__thumbnail">
+                                            <img src="assets/img/project/project1-285x200.jpg" alt="Project">
+                                        </figure>
+                                        <div class="project-item__info">
+                                            <h3 class="project-item__title"><a href="#">Business Loans</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="project-item-2">
+                                        <figure class="project-item__thumbnail">
+                                            <img src="assets/img/project/project1-285x200.jpg" alt="Project">
+                                        </figure>
+                                        <div class="project-item__info">
+                                            <h3 class="project-item__title"><a href="#">Pawning Services</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                          <%--      <div class="item">
+                                    <div class="project-item-2">
+                                        <figure class="project-item__thumbnail">
+                                            <img src="assets/img/project/project1-285x200.jpg" alt="Project">
+                                        </figure>
+                                        <div class="project-item__info">
+                                            <h3 class="project-item__title"><a href="#">Name Of the Project</a></h3>
+                                        </div>
+                                    </div>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Projects Area End -->
+
+            <!-- Testimonial Area Start -->
+            <section class="testimonial-area bg-image pt--95 pb--100 mb--95" data-bg-image="assets/img/bg/home01_b2.jpg">
+                <div class="container">
+                    <div class="row mb--40">
+                        <div class="col-12 text-center">
+                            <h2 class="color--white">Testimonials</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="fp-element-carousel slick-dot-mb-30"
+                            data-slick-options='{
+                                "spaceBetween": 30,
+                                "slidesToShow": 3,
+                                "slidesToScroll": 1,
+                                "infinite": true,
+                                "dots": true
+                            }'
+                            data-slick-responsive= '[
+                                {"breakpoint":1199, "settings": {
+                                    "slidesToShow": 3
+                                }},
+                                {"breakpoint":991, "settings": {
+                                    "slidesToShow": 2
+                                }},
+                                {"breakpoint":767, "settings": {
+                                    "slidesToShow": 1
+                                }}
+                            ]'>
+                                <div class="item">
+                                    <div class="testimonial">
+                                        <div class="testimonial__inner">
+                                            <div class="testimonial__text">
+                                                <p>“Their customer support was amazing. Their help was quick and gave me very clear instructions to follow. Incredible Template. Thumb up!”</p>
+                                            </div>
+                                            <div class="testimonial__author">
+                                                <figure class="testimonial__author--img">
+                                                    <img src="assets/img/testmonial/testimonial2-170x170.jpg" alt="Testimonial Author">
+                                                </figure>
+                                                <div class="testimonial__author--info">
+                                                    <h4 class="testimonial__author--name">Adam Bert</h4>
+                                                    <span class="testimonial__author--role">Customer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial">
+                                        <div class="testimonial__inner">
+                                            <div class="testimonial__text">
+                                                <p>“Their customer support was amazing. Their help was quick and gave me very clear instructions to follow. Incredible Template. Thumb up!”</p>
+                                            </div>
+                                            <div class="testimonial__author">
+                                                <figure class="testimonial__author--img">
+                                                    <img src="assets/img/testmonial/testimonial3-170x170.jpg" alt="Testimonial Author">
+                                                </figure>
+                                                <div class="testimonial__author--info">
+                                                    <h4 class="testimonial__author--name">Adam Bert</h4>
+                                                    <span class="testimonial__author--role">Customer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial">
+                                        <div class="testimonial__inner">
+                                            <div class="testimonial__text">
+                                                <p>“Their customer support was amazing. Their help was quick and gave me very clear instructions to follow. Incredible Template. Thumb up!”</p>
+                                            </div>
+                                            <div class="testimonial__author">
+                                                <figure class="testimonial__author--img">
+                                                    <img src="assets/img/testmonial/testimonial2-170x170.jpg" alt="Testimonial Author">
+                                                </figure>
+                                                <div class="testimonial__author--info">
+                                                    <h4 class="testimonial__author--name">Adam Bert</h4>
+                                                    <span class="testimonial__author--role">Customer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonial">
+                                        <div class="testimonial__inner">
+                                            <div class="testimonial__text">
+                                                <p>“Their customer support was amazing. Their help was quick and gave me very clear instructions to follow. Incredible Template. Thumb up!”</p>
+                                            </div>
+                                            <div class="testimonial__author">
+                                                <figure class="testimonial__author--img">
+                                                    <img src="assets/img/testmonial/testimonial2-170x170.jpg" alt="Testimonial Author">
+                                                </figure>
+                                                <div class="testimonial__author--info">
+                                                    <h4 class="testimonial__author--name">Adam Bert</h4>
+                                                    <span class="testimonial__author--role">Customer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial Area End -->
+            
+            <!-- Mini Blog Area Start -->
+            <section class="mini-blog-area mb--100 mb-sm--50">
+                <div class="container">
+                    <div class="row mb--45">
+                        <div class="col-12 text-center">
+                            <h2>CSR Update</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-sm--50">
+                            <article class="mini-blog">
+                                <div class="mini-blog__inner">
+                                    <div class="mini-blog__thumbnail">
+                                        <figure class="image">
+                                            <img src="assets/img/blog/news1-270x230.jpg" alt="Blog">
+                                        </figure>
+                                        <span class="mini-blog__date">15 <br> Mar</span>
+                                    </div>
+                                    <div class="mini-blog__info">
+                                        <h3 class="mini-blog__title">
+                                            <a href="#">What Makes A Financial Website Successful?</a>
+                                        </h3>
+                                        <div class="mini-blog__content">
+                                            <p>Financial services must tie these three factors together - customer experience,...</p>
+                                        </div>
+                                        <a href="#" class="read-more btn btn-no-bg btn-color-blue">Read More <i class="fa fa-caret-right"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 mb-sm--50">
+                            <article class="mini-blog">
+                                <div class="mini-blog__inner">
+                                    <div class="mini-blog__thumbnail">
+                                        <figure class="image">
+                                            <img src="assets/img/blog/news3-270x230.jpg" alt="Blog">
+                                        </figure>
+                                        <span class="mini-blog__date">15 <br> Mar</span>
+                                    </div>
+                                    <div class="mini-blog__info">
+                                        <h3 class="mini-blog__title">
+                                            <a href="news-details-image.html">Why Do I Need To Use Financial Consulting Service?</a>
+                                        </h3>
+                                        <div class="mini-blog__content">
+                                            <p>Financial services must tie these three factors together - customer experience,...</p>
+                                        </div>
+                                        <a href="news-details-image.html" class="read-more btn btn-no-bg btn-color-blue">Read More <i class="fa fa-caret-right"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Mini Blog Area End -->
+
+            <!-- Contact Info Area Start -->
+            <div class="home-contact-area ptb--25 ptb-md--35 bg-color" data-bg-color="#2C5390">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 mb-md--20">
+                            <div class="home-contact">
+                                <div class="home-contact__icon">
+                                    <div class="icon icon-rounded icon-big icon-hover-1">
+                                        <i class="pe-7s-call bg--white-light"></i>
+                                    </div>
+                                </div>
+                                <div class="home-contact__info">
+                                    <span class="home-contact__small">Call Us Now</span>
+                                    <span class="home-contact__big">0117 111 112</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-md--20">
+                            <div class="home-contact">
+                                <div class="home-contact__icon">
+                                    <div class="icon icon-rounded icon-big icon-hover-1">
+                                        <i class="pe-7s-mail-open-file bg--white-light"></i>
+                                    </div>
+                                </div>
+                                <div class="home-contact__info">
+                                    <span class="home-contact__small">Emal Us</span>
+                                    <span class="home-contact__big">info@cdff.lk</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="home-contact">
+                                <div class="home-contact__icon">
+                                    <div class="icon icon-rounded icon-big icon-hover-1">
+                                        <i class="pe-7s-map-marker bg--white-light"></i>
+                                    </div>
+                                </div>
+                                <div class="home-contact__info">
+                                    <span class="home-contact__small">Our Company</span>
+                                    <span class="home-contact__big">No.667, Colombo Road,Ja-Ela, Sri Lanka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Info Area End -->
+
+            <!-- Call Back Form Area Start -->
+            <section class="callback-area opacity-bg bg-image" data-bg-image="assets/img/bg/home02_i3.jpg">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="callback-box border-radius-top text-center mt--70">
+                                <h2 class="mb--20">Request A Call Back</h2>
+                                <p class="mb--25">Would you like to speak to one of our financial advisers over the phone? Just submit your details and we’ll be in touch shortly. You can also e-mail us for any further concern.</p>
+                                <form action="#" class="form">
+                                    <div class="form__group mb--20">
+                                        <input type="text" name="callback_name" id="callback_name" class="form__input" placeholder="Your Name">
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <select class="form__input form__input--select" name="callback_select" id="callback_select">
+                                            <option value="discuss">I would like to discuss</option>
+                                            <option value="design">Design</option>
+                                        </select>                                        
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <input type="email" name="callback_email" id="callback_email" class="form__input" placeholder="Your Email">
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <input type="text" name="callback_phone" id="callback_phone" class="form__input" placeholder="Your Phone Number">
+                                    </div>
+                                      <div class="form__group mb--20">
+                                        <input type="text" name="callback_phone" id="callback_Location" class="form__input" placeholder="Your Location">
+                                    </div>
+                                    <button type="submit" class="btn btn-submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Call Back Form Area End -->
+
+            <!-- Brand Area Start -->
+            <div class="brand-area ptb--80 pb-sm--30 bg-color" data-bg-color="#F9F9F9">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center mb-sm--50">
+                            <figure>
+                                <img src="assets/img/brand/client2_1.png" alt="Brand">
+                            </figure>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center mb-sm--50">
+                            <figure>
+                                <img src="assets/img/brand/client2_2.png" alt="Brand">
+                            </figure>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center mb-sm--50">
+                            <figure>
+                                <img src="assets/img/brand/client2_3.png" alt="Brand">
+                            </figure>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center mb-sm--50">
+                            <figure>
+                                <img src="assets/img/brand/client2_4.png" alt="Brand">
+                            </figure>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center mb-sm--50">
+                            <figure>
+                                <img src="assets/img/brand/client2_5.png" alt="Brand">
+                            </figure>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center mb-sm--50">
+                            <figure>
+                                <img src="assets/img/brand/client2_6.png" alt="Brand">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Brand Area End -->
+        </div>
+        <!-- Main Content Wrapper End -->
+
+        <!-- Footer Start-->
+        <footer class="footer">
+            <div class="footer-top border-bottom-2 pt--70 pt-md--85 pb--45 pb-lg--40 pb-md--65">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--45">
+                            <div class="footer-widget">
+                                <div class="textwidget">
+                                    <a href="index.aspx" class="d-block">
+                                        <img src="assets/img/logo/logo_02.png" alt="Logo" class="footer-logo mb--30">
+                                    </a>
+                                    <p class="mb--40">CDFF is one of the world’s leading financial Service providor.</p>
+                                    <p><i class="fa fa-map-marker"></i>No.667, Colombo Road,Ja-Ela, Sri Lanka</p>
+                                    <p><i class="fa fa-phone"></i>(+94) 117 111 112</p>
+                                    <p><i class="fa fa-envelope"></i><a href="maito:info@cdff.lk">info@cdff.lk</a></p>
+                                    <p><i class="fa fa-desktop"></i><a href="www.cdff.lk">www.cdff.lk</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--20">
+                            <div class="footer-widget">
+                                <h3 class="widget-title mb--20">Explore</h3>
+                                <ul class="widget-menu two-column-list">
+                                    <li><a href="index.aspx">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Bonds</a></li>
+                                    <li><a href="#">Commodities</a></li>
+                                    <li><a href="#">Investments</a></li>
+                                    <li><a href="#">Retirement</a></li>
+                                    <li><a href="#">Stocks</a></li>
+                                    <li><a href="#">Trades</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-widget">
+                                <h3 class="widget-title mb--20">Subscribe</h3>
+                                <div class="textwidget border-bottom-2 mb--30 pb--30">
+                                    <form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="newsletter mc-form mb--20" method="post" target="_blank">
+                                        <input type="email" class="newsletter__input" name="newsletter_email" id="newsletter_email" placeholder="Enter Your E-mail">
+                                        <button type="submit" class="newsletter__submit"><i class="fa fa-envelope"></i></button>
+                                    </form>
+                                    <p>Get latest updates and offers.</p>
+                                </div>
+                                <div class="textwidget">
+                                    <ul class="social social-with-text two-column-list">
+                                        <li class="social__item">
+                                            <a class="social__link" href="https://www.facebook.com" target="_blank" rel="noopener">
+                                                <i class="social__icon fa fa-facebook"></i>
+                                                <span class="social__text">Facebook</span>
+                                            </a>
+                                        </li>
+                         
+                                        <li class="social__item">
+                                            <a class="social__link" href="https://www.linkedin.com" target="_blank" rel="noopener">
+                                                <i class="social__icon fa fa-linkedin"></i>
+                                                <span class="social__text">Linkedin</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom ptb--30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="copyright-text">&copy; CDFF 2026 Made With <i class="fa fa-heart"></i> by <a href="https://dinuro.com" target="_blank" rel="noopener">DINUROZ PRIVATE LIMITED</a></p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <ul class="footer-menu">
+                                <li><a href="">Legal</a></li>
+                                <li><a href="">Sitemap</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End-->
+
+        <!-- Global Overlay Start -->
+        <div class="fp-global-overlay"></div>
+        <!-- Global Overlay End -->
+
+        <!-- Global Overlay Start -->
+        <a class="scroll-to-top" href=""><i class="fa fa-angle-up"></i></a>
+        <!-- Global Overlay End -->
+
+        <!-- Searchform Popup Start -->
+        <div class="popup-search" id="searchForm">
+            <div class="popup-search__body">
+                <a href="#" class="btn-close"><i class="fa fa-times"></i></a>
+                <form action="#" class="searchform">
+                    <input type="text" name="popup-search" id="popup-search" class="searchform__input" placeholder="Search...">
+                    <button type="submit" class="searchform__submit"></button>
+                </form>
+                <p>* Type a keyword then press Enter</p>
+            </div>
+        </div>
+        <!-- Searchform Popup End -->
+
+        <!-- Color Variation Start -->
+     <%--   <div class="style-customizer closed">
+            <div class="buy-button">
+                <a class="opener" href="#"><i class="fa fa-cog fa-spin"></i></a>
+            </div>
+            <div class="clearfix content-chooser">
+                <h3>Color Schemes</h3>
+                <p>Which Template color you want to use? Select from here.</p>
+                <ul class="styleChange clearfix">
+                    <li class="skin-default selected" data-color="#33346a" data-style="main"></li>
+                    <li class="skin-chill" data-color="#d49d35" data-style="main-chill"></li>
+                    <li class="skin-dixie" data-color="#ac3e39" data-style="main-dixie"></li>
+                 <li class="skin-froly" data-color="#33346a" data-style="main-froly"></li>
+                   <li class="skin-dodger" data-color="#3794f3" data-style="main-dodger"></li>
+                    <li class="skin-froly" data-color="#f17283" data-style="main-froly"></li>
+                    <li class="skin-green" data-color="#37f396" data-style="main-green"></li>
+                    <li class="skin-lime" data-color="#c8f905" data-style="main-lime"></li>
+                    <li class="skin-nova" data-color="#4d2a4f" data-style="main-nova"></li>
+                    <li class="skin-phant" data-color="#103754" data-style="main-phant"></li>
+                    <li class="skin-plum" data-color="#863C80" data-style="main-plum"></li>
+                    <li class="skin-red" data-color="#F33837" data-style="main-red"></li>
+                    <li class="skin-sandal" data-color="#a57e6f" data-style="main-sandal"></li>
+                </ul>
+            </div>
+        </div>--%>
+        <!-- Color Variation End -->
+    </div>
+    <!-- Main Wrapper End -->
+ 
+
+    <!-- ************************* JS Files ************************* -->
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script src="assets/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>    
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="assets/js/revoulation/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.migration.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.video.min.js"></script>
+
+    <!-- REVOLUTION JS ACTIVATION FILE -->
+    <script src="assets/js/revoulation.js"></script>
+
+
+</body>
+
+</html>

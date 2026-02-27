@@ -1,0 +1,153 @@
+/******************************
+ 
+INDEX:
+
+    00 - Base - Global
+    01 - Base - Typography
+
+    10 - Layout - Header
+    11 - Layout - Footer
+
+    20 - Components - Accordion
+    21 - Components - Animation
+    22 - Components - Award
+    23 - Components - Blog
+        23.00 - Mini Blog
+        23.01 - Post
+
+    24 - Components - Button
+        24.00 - Global Button
+        24.01 - Read More Button
+        24.02 - Add to Cart Button
+
+    25 - Components - Carousel
+        25.00 - Carousel Helper
+        25.01 - Carousel Gutter
+        25.02 - Slick Dot Margin Bottom 
+        25.03 - Carousel Nav
+
+    26 - Components - Comment
+    27 - Components - Form
+        27.00 - Global Form
+        27.01 - Newsletter Form
+        27.02 - Search Form
+        27.03 - Nice Select
+
+    28 - Components - Icon
+    29 - Components - Modal
+        29.00 - Quick View Modal
+        29.01 - Search Popup
+
+    30 - Components - Navigation
+        30.00 - Main Navigation
+        30.01 - Off Canvas Menu
+        30.02 - Top Menu
+
+    31 - Components - Product
+        31.00 - Global Proudct
+        31.01 - Proudct Summary
+        31.02 - Proudct Gallery
+
+    32 - Components - Progress Bar
+    33 - Components - Project
+        33.00 - Project Filter
+        33.01 - Project item
+        33.02 - Project Details
+    
+    34 - Components - Review
+    35 - Components - Services
+    36 - Components - Slider
+    37 - Components - Social
+    38 - Components - Table
+    39 - Components - Tabs
+        39.00 - Tab Style 01
+        39.01 - Tab Style 02
+        39.02 - Tab Content
+
+    40 - Components - Team
+    41 - Components - Testimonial 
+    42 - Components - Timeline 
+    43 - Components - Widget
+
+    50 - Pages - Cart
+    51 - Pages - Checkout
+    52 - Pages - Shop
+
+    60 - Utilities - Helper
+    61 - Utilities - Common
+    62 - Utilities - Color
+
+
+
+
+******************************/
+
+
+/*
+    Defult Primary Color:       #13909C
+    Default Border Color:       #eeeeee
+    Default Text Color:         #444444
+    Default Heading Color:      #222222
+    Default Body Font:          'Roboto', sans-serif;
+
+*/
+
+
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Open+Sans:400,600,700');
+
+
+// Base 
+
+@import 'base/variables';
+$primary-color: #d49d35;
+
+@import 'base/mixins';
+@import 'base/typography';
+
+// Layout 
+
+@import 'layout/header';
+@import 'layout/footer';
+
+// Components
+@import 'components/accordion';
+@import 'components/animation';
+@import 'components/award';
+@import 'components/blog';
+@import 'components/button';
+@import 'components/carousel';
+@import 'components/comment';
+@import 'components/form';
+@import 'components/icon';
+@import 'components/modal';
+@import 'components/navigation';
+@import 'components/product';
+@import 'components/progress-bar';
+@import 'components/project';
+@import 'components/review';
+@import 'components/services';
+@import 'components/slider';
+@import 'components/social';
+@import 'components/table';
+@import 'components/tabs';
+@import 'components/team';
+@import 'components/testimonial';
+@import 'components/timeline';
+@import 'components/widget';
+
+ 
+// Pages 
+
+@import 'pages/cart'; 
+@import 'pages/checkout'; 
+@import 'pages/shop'; 
+
+
+// Utilities
+
+@import 'utilities/common';
+@import 'utilities/helper';
+@import 'utilities/color'; 

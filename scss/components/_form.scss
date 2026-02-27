@@ -1,0 +1,246 @@
+/*****************************
+27 - Components - Form
+*****************************/
+
+/*--- 27.00 - Global Form --*/
+ 
+.form{
+    div, input, textarea{
+        line-height: 1;
+    }
+    &__label{
+        margin-bottom: 10px;
+        &.inline-label{
+            margin-bottom: 0;
+        }
+    }
+    &__input{
+        width: 100%;
+        height: 44px;
+        line-height: 40px;
+        border: 2px solid $border-color;
+        padding: 0 20px;
+        @extend %borderRadius;
+        @extend %fontSize16;
+        @extend %heading-color;
+        @extend %basetransition;
+        &--textarea{
+            height: 110px;
+            padding-top: 10px;
+            &-2{
+                height: 200px;
+                padding: 20px 25px;
+            }
+        }
+        &:focus{
+            border-color: $color-light;
+        }
+        &--2{
+            border-width: 0;
+            border-bottom-width: 2px;
+            border-radius: 0 !important;
+            padding-left: 0;
+            @extend %fontWeight700;
+            @extend %heading-color;
+            @include placeholder{
+                font-weight: 700;
+            }
+            &:focus{
+                border-color: #383E9C;
+            }
+        }
+    }    
+    &__output{
+        text-align: left;
+        margin-top: 5px;
+        &.success{
+            color: $color-green;
+        }
+        &.error{ 
+            color: $color-red;
+        }
+    }
+    &.shipping-calculator-form{
+        .nice-select{
+            margin-bottom: 1rem;
+            @include breakpoint(small){
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+
+/*--- 27.01 - Newsletter Form --*/
+
+.newsletter {
+    @extend %posrelative;
+    &__input {
+        height: 44px;
+        line-height: 44px;
+        width: 100%;
+        @include border-radius(4px);
+        border: none;
+        padding: 0 65px 0 20px;
+        @extend %heading-color;
+    }
+
+    &__submit {
+        @extend %primary-bg-color;
+        @extend %white-color;
+        @extend %posabsolute;
+        @include border-radius(4px);
+        @include textBoxCenter(48, 44);
+        right: 0;
+        top: 0;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/*--- 27.02 - Search Form --*/
+
+.searchform {
+    &__input{
+        width: 100%;
+        @include border-radius(2px);
+        border: none;
+        height: 58px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: $color-gray;
+        @extend %white-bg-color;
+        @include placeholder{
+            color: $color-gray;
+        }
+    }
+    &__submit{
+        display: none;
+        border: none;
+        @extend %transparent-bg;
+    }
+    &-2{
+        @extend %posrelative;
+        .searchform{
+            &__input{
+                @extend %transparent-bg;
+                @include border-radius(0);
+                border-bottom: 1px solid $color-white;
+                height: 25px;
+                padding-left: 5px;
+                padding-right: 35px;
+                color: $color-white;
+                @include placeholder{
+                    color: $color-white;
+                }
+            }
+            &__submit{
+                display: block;
+                @extend %posabsolute;
+                right: 0;
+                top: 0;
+                @extend %heightAuto;
+                @extend %white-color;
+            }
+        }
+    }
+    &-3{
+        @extend %posrelative;
+        .searchform{
+            &__input{
+                @extend %transparent-bg;
+                @include border-radius(0);
+                border-bottom: 2px solid $border-color;
+                height: 40px;
+                padding-left: 0;
+                padding-right: 35px;
+                @extend %heading-color;
+                @extend %fontWeight700;
+                @include placeholder{
+                    color: #888;
+                }
+            }
+            &__submit{
+                display: block;
+                @extend %posabsolute;
+                right: 0;
+                top: 0;
+                @extend %heightAuto;
+                @extend %heading-color;
+            }
+        }
+    }
+}
+
+
+/*--- 27.03 - Nice Select --*/
+
+.nice-select{
+    padding-right: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px !important;
+    border: 2px solid $border-color;
+    .current{
+        display: block;
+        font-size: $body-font-size;
+        color: $body-color;
+    }
+    &:after{
+        @extend %fontAwesome;
+        content: '\f107';
+        border: none;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 40px;
+        background-color: #eeeeee;
+        text-align: center;
+        line-height: 44px !important;
+        font-size: 16px;
+        @extend %heading-color;
+        @include transform-origin(0 0);
+        @include transform(rotate(0));
+    }
+    &.open{
+        &:after{
+            @include transform(rotate(0));
+        }
+    }
+    .list{
+        width: 100%;
+        max-height: 260px;
+    }
+}
+
+
+/*--- 27.04 - Cart Form --*/
+
+.cart-form{
+    &__input{
+        width: 150px;
+        padding: 6px 6px 5px;
+        height: 44px;
+        line-height: 40px;
+        border: 2px solid $border-color;
+        padding: 0 20px;
+        @extend %heading-color;
+        @extend %borderRadius;
+        margin-right: 15px;
+    }
+    &__btn{
+        line-height: 1;
+        padding: 13px 18px;
+        @extend %fontWeight700;
+        @extend %borderRadius;
+        @extend %textUpper;
+        color: #515151;
+        background-color: #ebe9eb;
+        border: 0;
+        cursor: pointer;
+        &:hover{
+            background-color: #dad8da;
+        }
+    }
+}

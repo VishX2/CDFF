@@ -1,0 +1,79 @@
+/*****************************
+40 - Components - Team
+*****************************/
+
+.team-member{
+	&__inner{
+		@extend %posrelative;
+	}
+	&__thumbnail{
+		@extend %posrelative;
+		z-index: -1;
+		a{
+			display: block;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	&__info{
+		@extend %athens-gray-bg;
+		@extend %borderRadius;
+	    z-index: 999;
+	    width: 90%;
+	    padding: 20px;
+	    margin-left: auto;
+	    margin-top: -40px;
+	}
+	&__content{
+		margin-bottom: 10px;
+	}
+	&__name{
+	    font-size: 18px;
+	    @extend %fontWeight400;
+	    margin-bottom: 0;
+	}
+	&__role{
+		@extend %displayBlock;
+	}
+
+	&-style-2{
+		.team-member{
+			&__thumbnail{
+				z-index: 5;
+				overflow: hidden;
+				background-color: #000;
+
+				img{
+					@extend %zoomIn;
+				}
+				&:before{
+					@extend %effectAppolo;
+				}
+				&:hover{
+					&:before{
+						@extend %effectAppoloShow;
+					}
+					img{
+						@extend %zoomInShow;
+					}
+				}
+			}
+			&__info{
+				margin-top: 10px;
+				padding: 0;
+				@extend %width100;
+				@extend %transparent-bg;
+			}
+			&__content{
+				margin-bottom: 18px;
+			}
+			&__name{
+				@extend %fontWeight700;
+			}
+			&__role{
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

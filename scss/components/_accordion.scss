@@ -1,0 +1,96 @@
+/*****************************
+20 - Components - Accordion
+*****************************/
+
+.accordion{
+	&-item{
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+		&:not(:first-of-type) {
+			border-top-width: 2px;
+			border-top-style: solid;
+			border-top-color: $border-color;
+		}
+	}
+	&-header{
+		padding: 0 15px;
+	}
+	&-button{
+		line-height: 1.38;
+		border-bottom: 2px solid $color-blue-2;
+		font-weight: 700;
+		&.collapsed{
+			border: none;
+		}
+		&:not(.collapsed) {
+			box-shadow: none;
+		}
+	}
+	&-2{
+		.accordion{
+			&-item{
+				background-color: #f8f8f8;
+				border: none;
+				@extend %noborderRadius;
+				&:not(:last-child){
+					margin-bottom: 0;
+				}
+				&:first-child{
+					border-top: 2px solid $border-color;
+				}
+				&:last-child{
+					border-bottom: 2px solid $border-color;
+				}
+				&:first-of-type,
+				&:not(:first-of-type):not(:last-of-type){
+					@extend %noborderRadius;
+				}
+			}
+			&-header{
+				padding: 0;
+			}
+			&-button{
+				border-bottom: 0;
+				padding-left: 55px;
+				color: $color-dove-gray;
+				background-color: #f8f8f8;
+				@extend %fontWeight400;
+				@extend %posrelative;
+				&:after{
+					display: none;
+					background: none;
+				}
+				&:before{
+					@extend %pseudo;
+					-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+					left: 16px;
+					right: 0;
+					top: 50%;
+					width: 12px;
+					border-style: solid;
+					border-width: 2px 0 0 0;
+					@include transform(translateY(-50%));
+				}
+				&.collapsed{
+					&:after{
+						@extend %pseudo;
+						height: 12px;
+						-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+						left: 21px;
+						top: 50%;
+						border-style: solid;
+						border-width: 0 0 0 2px;
+						@include transform(translateY(-50%));
+						display: block;
+					}
+					&:hover{
+						background-color: #f0f0f0;
+					}
+				}
+			}
+		}
+	}
+}

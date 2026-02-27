@@ -1,0 +1,21 @@
+/*****************************
+52 - Pages - Shop
+*****************************/
+
+.shop-toolbar{
+	.product{
+		&-ordering{
+			select{
+				height: 44px;
+    			line-height: 40px;
+    			@extend %borderRadius;
+    			padding: 0 20px;
+    			border: 2px solid $border-color;
+			    background-image: url(../img/icons/angle-down.png);
+			    background-repeat: no-repeat;
+			    background-position: right 20px center;
+			    @include appearance(none);
+			}
+		}
+	}
+}

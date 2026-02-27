@@ -1,0 +1,64 @@
+/*****************************
+11 - Layout - Footer
+*****************************/
+
+.footer{
+    background-color: $heading-color;
+    color: $color-silver;
+    p{
+	    line-height: 1.8;
+	    color: $color-silver;
+	    i{
+		    padding-right: 10px;
+		    width: 30px;
+	    }
+    }
+    a{
+    	color: $color-silver;
+    	&:hover{
+    		color: $color-gray-2;
+    	}
+    }
+    &-top{
+    	&.border-bottom{
+    		border-color: rgba($color-white, .1);
+    	}
+    }
+    &-logo{
+		width: auto;
+		height: 36px;
+    }
+    &-menu{
+    	li{
+    		display: inline-block;
+    		&:not(:first-child){
+    			margin-left: 30px;
+    		}
+    	}
+    }
+    .widget-title{
+	    position: relative;
+	    overflow: hidden;
+	    font-size: 22px;
+	    color: $color-white;
+	    border-bottom: 1px solid rgba($color-white, 0.1);
+	    padding-bottom: 10px;
+	    display: inline-block;
+    }
+    .widget-menu{
+    	li{
+    		margin-bottom: 16px;
+    		@include breakpoint(medium){
+    			margin-bottom: 12px;
+    		}
+    	}
+    }
+}
+
+.copyright-text{
+	i{
+		color: red;
+		width: auto !important;
+		padding-right: 0 !important;
+	}
+}

@@ -1,0 +1,30 @@
+/*****************************
+22 - Components - Award
+*****************************/
+
+.award-item{
+	@extend %posrelative;
+	padding-left: 110px;
+	@include breakpoint(medium){
+		padding-left: 90px;
+	}
+	@include breakpoint(xxsmall){
+		padding-left: 0;
+	}
+	&__icon{
+		@extend %posabsolute;
+		left: 0;
+		top: 0;
+		@include breakpoint(xxsmall){
+			position: relative !important;
+			margin-bottom: 10px;
+		}
+	}
+	&__title{
+		font-size: 18px;
+		color: $color-shaft;
+	}
+	p{
+		margin-bottom: 20px;
+	}
+}
