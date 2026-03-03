@@ -79,6 +79,21 @@
                 font-size: 24px;
             }
         }
+
+        #branch-map {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #branch-map .leaflet-top,
+        #branch-map .leaflet-bottom {
+            position: absolute;
+            z-index: 400;
+        }
+
+        #branch-map .leaflet-control {
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body>
@@ -225,26 +240,26 @@
                             <h3 class="heading__tertiary mb--20">Our Branch Network</h3>
                             <ul class="branch-list">
                                 <li onclick="showBranch('Akkaraipattu', 7.2167, 81.8500)">Akkaraipattu</li>
-                                <li onclick="showBranch('Batticaloa', 7.7170, 81.7000)">Batticaloa</li>
+                                <li onclick="showBranch('Batticaloa', 7.7170, 81.7000, '82,Bazar Street,Batticalo')">Batticaloa</li>
                                 <li onclick="showBranch('Chenkaladi', 7.7833, 81.6000)">Chenkaladi</li>
                                 <li onclick="showBranch('Chunnakam', 9.7500, 80.0333)">Chunnakam</li>
-                                <li onclick="showBranch('Divulapitiya', 7.2333, 80.0167)">Divulapitiya</li>
+                                <li onclick="showBranch('Divulapitiya', 7.2333, 80.0167, '71, Kurunegala Road,Divulapitiya')">Divulapitiya</li>
                                 <li onclick="showBranch('Galle', 6.0535, 80.2210)">Galle</li>
-                                <li onclick="showBranch('Gampaha', 7.0873, 79.9990)">Gampaha</li>
+                                <li onclick="showBranch('Gampaha', 7.0873, 79.9990, '81, Colombo Road,Gampaha')">Gampaha</li>
                                 <li onclick="showBranch('Head Office - Ja Ela', 7.0746, 79.8910)">Head Office - Ja Ela</li>
                                 <li onclick="showBranch('Homagama', 6.8410, 80.0030)">Homagama</li>
                                 <li onclick="showBranch('Jaffna', 9.6615, 80.0255)">Jaffna</li>
-                                <li onclick="showBranch('Kalmunai', 7.4167, 81.8167)">Kalmunai</li>
-                                <li onclick="showBranch('Kekirawa', 8.0500, 80.6000)">Kekirawa</li>
+                                <li onclick="showBranch('Kalmunai', 7.4167, 81.8167, 'Main Street, Pandiruppu - 02, Kalmunai')">Kalmunai</li>
+                                <li onclick="showBranch('Kekirawa', 8.0500, 80.6000, '147, Yakalla Road, Kekirawa')">Kekirawa</li>
                                 <li onclick="showBranch('Kiribathgoda', 6.9786, 79.9290)">Kiribathgoda</li>
                                 <li onclick="showBranch('Mannar', 8.9770, 79.9040)">Mannar</li>
                                 <li onclick="showBranch('Matale', 7.4675, 80.6234)">Matale</li>
                                 <li onclick="showBranch('Puttalam', 8.0362, 79.8283)">Puttalam</li>
-                                <li onclick="showBranch('Trincomalee', 8.5874, 81.2152)">Trincomalee</li>
-                                <li onclick="showBranch('Vavuniya', 8.7510, 80.4970)">Vavuniya</li>
+                                <li onclick="showBranch('Trincomalee', 8.5874, 81.2152, '300,Central Road,Trincomalee')">Trincomalee</li>
+                                <li onclick="showBranch('Vavuniya', 8.7510, 80.4970, '50,2nd Cross Street,Vauniya')">Vavuniya</li>
                             </ul>
                         </div>
-                        <div class="col-lg-7"><div id="branch-map" style="width:100%; height:500px; border-radius:10px;"></div></div>
+                        <div class="col-lg-7"><div id="branch-map" style="width:100%; height:500px; border-radius:10px; position:relative; overflow:hidden;"></div></div>
                     </div>
                 </div>
             </div>
@@ -376,7 +391,14 @@
             branchMap = L.map('branch-map', {
                 center: [7.8731, 80.7718],
                 zoom: 8,
-                scrollWheelZoom: false
+                scrollWheelZoom: true,
+                touchZoom: true,
+                doubleClickZoom: true,
+                boxZoom: true,
+                keyboard: true,
+                dragging: true,
+                zoomControl: true,
+                tap: true
             });
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -385,25 +407,31 @@
             }).addTo(branchMap);
 
             const markerIcon = L.icon({
-                iconUrl: 'assets/img/icons/marker.png',
-                iconSize: [30, 40],
-                iconAnchor: [15, 40],
-                popupAnchor: [0, -35]
+                iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+                iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
             });
 
             branchMarker = L.marker([7.8731, 80.7718], { icon: markerIcon }).addTo(branchMap);
             infoPopup = L.popup();
         }
 
-        function showBranch(name, lat, lng) {
+        function showBranch(name, lat, lng, address = '') {
             if (!branchMap || !branchMarker || !infoPopup || !window.L) return;
 
             const location = L.latLng(lat, lng);
             branchMap.setView(location, 12);
             branchMarker.setLatLng(location);
+            const popupContent = address
+                ? '<strong>' + name + '</strong><br>' + address
+                : '<strong>' + name + '</strong>';
             infoPopup
                 .setLatLng(location)
-                .setContent('<strong>' + name + '</strong>')
+                .setContent(popupContent)
                 .openOn(branchMap);
         }
 
