@@ -2,7 +2,7 @@
 <html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
-    <title>Our Team</title>
+    <title>Board of Directors</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicons -->
@@ -57,32 +57,31 @@
         .team-member__social {
             margin-top: 15px;
         }
-        .team-member__social .social {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .team-member__social .social li a {
+        .team-member__social .linkedin-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background-color: #fff;
-            border: 2px solid #2C5390;
-            color: #2C5390;
-            font-size: 19px;
-            box-shadow: 0 8px 18px rgba(44, 83, 144, 0.22);
-            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .team-member__social .social li a:hover {
-            background-color: #2C5390;
+            gap: 8px;
+            min-width: 130px;
+            height: 44px;
+            padding: 0 18px;
+            border-radius: 999px;
+            background-color: #0a66c2;
+            border: 1px solid #0a66c2;
             color: #fff;
-            box-shadow: 0 10px 22px rgba(44, 83, 144, 0.35);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            box-shadow: 0 10px 20px rgba(10, 102, 194, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .team-member__social .linkedin-btn:hover {
+            background-color: #084f97;
+            box-shadow: 0 12px 24px rgba(8, 79, 151, 0.35);
+            transform: translateY(-1px);
+        }
+        .team-member__social .linkedin-btn i {
+            font-size: 16px;
         }
         /* Text Styling and Padding */
         .team-member__info {
@@ -150,14 +149,11 @@
             .team-member__desc {
                 font-size: 14px;
             }
-            .team-member__social .social {
-                justify-content: center;
-                gap: 10px;
-            }
-            .team-member__social .social li a {
-                width: 40px;
+            .team-member__social .linkedin-btn {
+                min-width: 118px;
                 height: 40px;
-                font-size: 16px;
+                padding: 0 14px;
+                font-size: 13px;
             }
             .col-md-6 {
                 max-width: 100% !important;
@@ -190,13 +186,11 @@
                 font-size: 13px;
                 line-height: 1.5;
             }
-            .team-member__social .social {
-                gap: 8px;
-            }
-            .team-member__social .social li a {
-                width: 36px;
+            .team-member__social .linkedin-btn {
+                min-width: 110px;
                 height: 36px;
-                font-size: 14px;
+                padding: 0 12px;
+                font-size: 12px;
             }
         }
     </style>
@@ -312,13 +306,8 @@
                                                     </li>
                                                     
                                                     <li>
-                                                        <a href="honors-awards.html">
-                                                            <span data-hover="Honors &amp; Awards" class="mm-text">Honors &amp; Awards</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
                                                         <a href="team.html">
-                                                            <span data-hover="Our Team" class="mm-text">Our Team</span>
+                                                            <span data-hover="Board of Directors" class="mm-text">Board of Directors</span>
                                                         </a>
                                                     </li>
                                                     
@@ -378,7 +367,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="page-title">Our Team</h1>
+                        <h1 class="page-title">Board of Directors</h1>
                     </div>
                 </div>
             </div>
@@ -392,7 +381,7 @@
                         <ul class="breadcrumb">
                             <li><a href="Index.aspx">Home</a></li>
                             <li><a href="about-us.html">About</a></li>
-                            <li class="current"><span>Our Team</span></li>
+                            <li class="current"><span>Board of Directors</span></li>
                         </ul>
                     </div>
                 </div>
@@ -410,18 +399,14 @@
                             <div class="team-member">
                                 <div class="team-member__inner row align-items-center">
                                     <div class="col-md-6">
-                                        <div class="team-member__info pt-4 mb-4">
+                                        <div class="team-member__info pt-4 mb-4 pb-4">
                                             <h3 class="team-member__name"><a href="#">Mr. Thomas Fernando</a></h3>
                                             <span class="team-member__role">Director / Board Chairman</span>
                                             <p class="team-member__desc">
                                                 With over 25 years of experience in Sri Lanka’s financial services sector, Mr. Fernando provides strategic leadership and governance oversight to CDFF. A Diploma holder in Marketing from the University of Colombo, he has built a strong reputation for business development, market expansion and sustainable financial management. As Chairman, he ensures that CDFF maintains strategic discipline, ethical governance and long-term institutional stability while aligning business growth with national development goals.
                                             </p>
                                             <div class="team-member__social">
-                                                <ul class="social">
-                                                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul>
+                                                <a href="https://linkedin.com" class="linkedin-btn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i><span>LinkedIn Profile</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -436,18 +421,14 @@
                             <div class="team-member">
                                 <div class="team-member__inner row align-items-center">
                                     <div class="col-md-6 order-md-2">
-                                        <div class="team-member__info pt-4 mb-4">
+                                        <div class="team-member__info pt-4 mb-4 pb-4">
                                             <h3 class="team-member__name"><a href="#">Mr. Mahesh Perera</a></h3>
                                             <span class="team-member__role">Director / Chief Executive Officer</span>
                                             <p class="team-member__desc">
                                                 Mr. Perera brings over 20 years of extensive experience in microfinance and financial services leadership. His professional journey includes 7 years at Ceylinco Grameen (HNB Finance) and 13 years at Commercial Credit. He holds an MBA from Cardiff Staffordshire University (UK) and possesses strong expertise in strategic planning, portfolio management, credit risk governance and branch expansion. As CEO, he is responsible for defining CDFF’s strategic direction, operational excellence, institutional growth and stakeholder confidence.
                                             </p>
                                             <div class="team-member__social">
-                                                <ul class="social">
-                                                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul>
+                                                <a href="https://linkedin.com" class="linkedin-btn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i><span>LinkedIn Profile</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -462,18 +443,14 @@
                             <div class="team-member">
                                 <div class="team-member__inner row align-items-center">
                                     <div class="col-md-6">
-                                        <div class="team-member__info pt-4 mb-4">
+                                        <div class="team-member__info pt-4 mb-4 pb-4">
                                             <h3 class="team-member__name"><a href="#">Mr. Ivan Bandara</a></h3>
                                             <span class="team-member__role">Director / Deputy Chief Executive Officer</span>
                                             <p class="team-member__desc">
                                                 With over two decades of industry experience, Mr. Bandara has held senior positions at Ceylinco Grameen (HNB Finance) for 7 years, Commercial Credit PLC for 6 years and LOLC for 6 years. He holds an MBA from Preah Sihamoniraja Buddhist University (Cambodia) and specializes in branch operations, performance management and operational strategy execution. As Deputy CEO, he plays a critical role in driving branch productivity, credit discipline and operational alignment with corporate strategy.
                                             </p>
                                             <div class="team-member__social">
-                                                <ul class="social">
-                                                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul>
+                                                <a href="https://linkedin.com" class="linkedin-btn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i><span>LinkedIn Profile</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -488,18 +465,14 @@
                             <div class="team-member">
                                 <div class="team-member__inner row align-items-center">
                                     <div class="col-md-6 order-md-2">
-                                        <div class="team-member__info pt-4 mb-4">
+                                        <div class="team-member__info pt-4 mb-4 pb-4">
                                             <h3 class="team-member__name"><a href="#">Mr. P. Kovarthan</a></h3>
                                             <span class="team-member__role">Director / Chief Operations Officer</span>
                                             <p class="team-member__desc">
                                                 Mr. Kovarthan possesses over 20 years of experience in microfinance operations, including leadership roles at Ceylinco Grameen for 6 years, Commercial Credit for 1 year and Nation Lanka Finance for 12 years. He holds a BBA in Management and is known for his strong operational structuring, portfolio monitoring, and process optimization expertise. As COO, he oversees day-to-day operational performance, ensures credit quality standards and drives service delivery efficiency across the branch network.
                                             </p>
                                             <div class="team-member__social">
-                                                <ul class="social">
-                                                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul>
+                                                <a href="https://linkedin.com" class="linkedin-btn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i><span>LinkedIn Profile</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -514,18 +487,14 @@
                             <div class="team-member">
                                 <div class="team-member__inner row align-items-center">
                                     <div class="col-md-6">
-                                        <div class="team-member__info pt-4 mb-4">
+                                        <div class="team-member__info pt-4 mb-4 pb-4">
                                             <h3 class="team-member__name"><a href="#">Mr. Jagath Ranathunga</a></h3>
-                                            <span class="team-member__role">Director / Chief Administration Officer</span>
+                                            <span class="team-member__role">Consultant</span>
                                             <p class="team-member__desc">
                                                 A respected entrepreneur with significant experience in real estate and corporate administration, Mr. Ranathunga brings strong governance and asset management capabilities to CDFF. He oversees administrative operations, infrastructure development, and institutional support functions, ensuring that CDFF maintains operational stability and organizational discipline.
                                             </p>
                                             <div class="team-member__social">
-                                                <ul class="social">
-                                                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul>
+                                                <a href="https://linkedin.com" class="linkedin-btn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i><span>LinkedIn Profile</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -543,8 +512,7 @@
                                     <ul class="widget-menu">
                                         <li><a href="about-us.html">Our Company</a></li>
                                         <li><a href="#">Careers</a></li>
-                                        <li><a href="#">Honors &amp; Awards</a></li>
-                                        <li class="active"><a href="team.html">Our Team</a></li>
+                                        <li class="active"><a href="team.html">Board of Directors</a></li>
                                         <li><a href="#">F.A.Q</a></li>
                                     </ul>
                                 </div>
@@ -560,10 +528,7 @@
                                         <h3 class="color--white">You Need Help?</h3>
                                     </div>
                                     <div class="col-md-6 mb-sm--20">
-                                        <p class="color--white text-md-start text-center">
-                                            Curabitur pharetra rutrum
-                                            lorem, vel imperdiet odio viverra nec.
-                                        </p>
+                                        
                                     </div>
                                     <div class="col-md-3 text-md-end text-center">
                                         <a href="contact-us.html" class="btn btn-2">
