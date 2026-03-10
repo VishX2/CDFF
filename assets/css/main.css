@@ -533,7 +533,11 @@ a, a:hover, a:focus, a:active, button, button:focus, input, select, textarea, .s
     border-color: rgba(255, 255, 255, 0.1); }
   .footer-logo {
     width: auto;
-    height: 36px; }
+    height: 72px;
+    max-width: 100%;
+    display: block;
+    -webkit-filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.2)); }
   .footer-menu li {
     display: inline-block; }
     .footer-menu li:not(:first-child) {
