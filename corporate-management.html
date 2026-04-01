@@ -1,0 +1,829 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <title>Corporate Management</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/favicon1.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/icon1.png">
+    <!-- ************************* CSS Files ************************* -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <!-- Revoulation CSS -->
+    <link rel="stylesheet" href="assets/css/revoulation.css">
+    <!-- style css -->
+    <link id="main-style" rel="stylesheet" href="assets/css/main.css">
+    <!-- Style customizer (Remove these two lines please) -->
+    <link rel="stylesheet" href="assets/css/style-customizer.css">
+    <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
+    <style>
+        /* Team Member Layout */
+        .team-member {
+            margin-bottom: 80px;
+        }
+        .team-member__inner {
+            padding: 18px 18px 22px;
+            margin: 0;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 14px 30px rgba(34, 53, 84, 0.08);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .team-member__thumbnail {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            width: 100%;
+            display: block;
+            min-height: 320px;
+            background-color: #f3f6fb;
+            z-index: 2;
+            border-radius: 12px;
+        }
+        .team-member__thumbnail img {
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 12px;
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            position: relative;
+            z-index: 3;
+        }
+        /* Social Icons as Simple Horizontal List Below Text */
+        .team-member__social {
+            margin-top: 15px;
+        }
+        .team-member__social .linkedin-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 130px;
+            height: 44px;
+            padding: 0 18px;
+            border-radius: 999px;
+            background-color: #0a66c2;
+            border: 1px solid #0a66c2;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            box-shadow: 0 10px 20px rgba(10, 102, 194, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .team-member__social .linkedin-btn:hover {
+            background-color: #084f97;
+            box-shadow: 0 12px 24px rgba(8, 79, 151, 0.35);
+            transform: translateY(-1px);
+        }
+        .team-member__social .linkedin-btn i {
+            font-size: 16px;
+        }
+        /* Text Styling and Padding */
+        .team-member__info {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 8px;
+            min-height: 112px;
+            width: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            z-index: 3;
+        }
+        .team-member__name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0;
+        }
+        .team-member__name a {
+            color: #1d2736;
+            display: block;
+            text-decoration: none;
+        }
+        .team-member__role {
+            font-size: 15px;
+            color: #2C5390;
+            font-weight: 600;
+            display: block;
+            line-height: 1.45;
+            margin-bottom: 0;
+        }
+        .team-member__desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+        /* Responsiveness */
+        @media (max-width: 991px) {
+            .team-member {
+                margin-bottom: 65px;
+            }
+            .team-member__inner {
+                padding: 16px 16px 20px;
+            }
+            .team-member__info {
+                min-height: 96px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .team-member__inner {
+                flex-direction: column !important;
+                padding: 14px 14px 18px;
+            }
+            .team-member {
+                margin-bottom: 40px;
+            }
+            .team-member__thumbnail {
+                margin-bottom: 16px;
+                max-width: 100%;
+                width: 100%;
+                min-height: 280px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .team-member__thumbnail img {
+                min-height: 280px;
+            }
+            .team-member__info {
+                text-align: center;
+                min-height: auto;
+            }
+            .team-member__name {
+                font-size: 18px;
+            }
+            .team-member__role {
+                font-size: 14px;
+            }
+            .team-member__desc {
+                font-size: 14px;
+            }
+            .team-member__social .linkedin-btn {
+                min-width: 118px;
+                height: 40px;
+                padding: 0 14px;
+                font-size: 13px;
+            }
+            .col-md-6 {
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            .order-md-1, .order-md-2 {
+                order: 0 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-member {
+                margin-bottom: 30px;
+            }
+            .team-member__inner {
+                padding: 12px 12px 16px;
+            }
+            .team-member__info {
+                gap: 6px;
+            }
+            .team-member__name {
+                font-size: 17px;
+            }
+            .team-member__role {
+                font-size: 13px;
+            }
+            .team-member__desc {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+            .team-member__social .linkedin-btn {
+                min-width: 110px;
+                height: 36px;
+                padding: 0 12px;
+                font-size: 12px;
+            }
+        }
+        .corporate-grid {
+            row-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Wrapper Start -->
+    <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+            <div class="header__inner fixed-header">
+                
+                <div class="header__middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header__middle-inner">
+                                    <div class="header__middle-left">
+                                        <div class="logo">
+                                            <a href="index.html" class="logo--normal">
+                                                <img src="assets/img/logo/logo_01.png" alt="Logo">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="header__middle-middle d-none d-lg-block">
+                                        <div class="site-info">
+                                            <div class="site-info__item">
+                                                <i class="pe-7s-call"></i>
+                                                <div class="site-info__content">
+                                                    <span class="site-info__title">0117 111 112</span>
+                                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk </a></span>
+                                                </div>
+                                            </div>
+                                            <div class="site-info__item">
+                                                <i class="pe-7s-map-marker"></i>
+                                                <div class="site-info__content">
+                                                    <span class="site-info__title">No.667, Colombo Road,</span>
+                                                    <span class="site-info__text">Ja-Ela, Sri Lanka</span>
+                                                </div>
+                                            </div>
+                                            <div class="site-info__item">
+                                                <i class="pe-7s-clock"></i>
+                                                <div class="site-info__content">
+                                                   <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                                    <span class="site-info__text">Monday to Saturday</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="header__middle-right d-none d-lg-block">
+                                        <ul class="social social-round text-end">
+                                            <li class="social__item">
+                                                <a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener">
+                                                    <i class="social__icon fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener">
+                                                    <i class="social__icon fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social__item">
+                                                <a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener">
+                                                    <i class="social__icon fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="header__toolbar-wrap d-block d-lg-none">
+                                        <div class="header__toolbar">
+                                            <a href="#searchForm" class="toolbar-btn">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                            <a href="#offcanvasMenu" class="toolbar-btn menu-btn">
+                                                <div class="hamburger-icon">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom bg-gradient d-none d-lg-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header__bottom-inner">
+                                    <nav class="main-navigation">
+                                        <ul class="mainmenu">
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="index.html" class="mainmenu__link">
+                                                    <span data-hover="Home" class="mm-text">Home</span>
+                                                </a>
+                                        
+                                            </li>
+                                            
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="about-us.html" class="mainmenu__link">
+                                                    <span data-hover="About Us" class="mm-text">About Us</span>
+                                                </a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="about-us.html">
+                                                            <span data-hover="Our Company" class="mm-text">Our Company</span>
+                                                        </a>
+                                                    </li>
+                                                    
+                                                    <li>
+                                                        <a href="team.html">
+                                                            <span data-hover="Board of Directors" class="mm-text">Board of Directors</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="corporate-management.html">
+                                                            <span data-hover="Corporate Management" class="mm-text">Corporate Management</span>
+                                                        </a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </li>
+
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="our-services.html" class="mainmenu__link">
+                                                    <span data-hover="Services" class="mm-text">Services</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="news-details-gallery.html" class="mainmenu__link">
+                                                    <span data-hover="Gallery" class="mm-text">Gallery </span>
+                                                </a>
+                                                
+                                            </li>
+
+
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="careers.html" class="mainmenu__link">
+                                                    <span data-hover="Careers" class="mm-text"> Careers</span>
+                                                </a>
+                                                 
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="csr.html" class="mainmenu__link">
+                                                    <span data-hover="Latest News" class="mm-text">Latest News</span>
+                                                </a>
+                                              
+                                            </li>
+                                            <li class="mainmenu__item menu-item-has-children">
+                                                <a href="contact-us.html" class="mainmenu__link">
+                                                    <span data-hover="Contact Us" class="mm-text">Contact Us</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="header__toggle-search">
+                                        <a href="#searchForm" class="toolbar-btn">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+                    <div class="offcanvas-menu-wrapper" id="offcanvasMenu">
+                <div class="offcanvas-menu-inner">
+                    <a href="#" class="btn-close">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                    <nav class="offcanvas-navigation">
+                        <ul class="offcanvas-menu">
+                            <li><a href="index.html"><span class="mm-text">Home</span></a></li>
+                                                        <li class="menu-item-has-children">
+                                <a href="about-us.html"><span class="mm-text">About Us</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="about-us.html"><span class="mm-text">Our Company</span></a></li>
+                                    <li><a href="team.html"><span class="mm-text">Board of Directors</span></a></li>
+                                    <li><a href="corporate-management.html"><span class="mm-text">Corporate Management</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="our-services.html"><span class="mm-text">Services</span></a></li>
+                            <li><a href="news.html"><span class="mm-text">News</span></a></li>
+                            <li><a href="careers.html"><span class="mm-text">Careers</span></a></li>
+                            <li><a href="contact-us.html"><span class="mm-text">Contact Us</span></a></li>
+                        </ul>
+                        <div class="site-info vertical">
+                            <div class="site-info__item">
+                                <i class="pe-7s-call"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">0117 111 112</span>
+                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk</a></span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-map-marker"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">No.667, Colombo Road,</span>
+                                    <span class="site-info__text">Ja-Ela, Sri Lanka</span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-clock"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                    <span class="site-info__text">Monday to Saturday</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="social social-round white-color">
+                            <li class="social__item">
+                                <a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Page Title Area Start -->
+        <section class="page-title-area bg-image ptb--80" data-bg-image="assets/img/bg/page_title_bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="page-title">Corporate Management</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Page Title Area End -->
+        <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area mb--60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="breadcrumb">
+                            <li><a href="Index.aspx">Home</a></li>
+                            <li><a href="about-us.html">About</a></li>
+                            <li class="current"><span>Corporate Management</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb Area End -->
+        <!-- Main Content Wrapper Start -->
+        <div class="main-content-wrapper">
+            <!-- About Content Area Start -->
+            <section class="inner-content-area">
+                <div class="container">
+                    <div class="row mb--10 mb-md--60">
+                        <div class="col-lg-9 order-lg-2">
+                            <div class="mb--45">
+                                <h2 class="mb--15">Corporate Management</h2>
+                                <p class="mb--0">Meet the leadership team responsible for guiding CDFF's operations, execution, and institutional performance. This page follows the site’s default header, footer, and image bar layout so it stays aligned with the rest of the About Us section.</p>
+                            </div>
+                            <div class="row corporate-grid">
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--20">
+                                            <img src="assets/img/team/corporate-management/Dilan-Rodrigo---Head-of-Micro.jpg" alt="Dilan Rodrigo">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Dilan Rodrigo</a></h3>
+                                            <span class="team-member__role">Head of Micro</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Madusanka-Serasinghe---Manager-Administration.jpeg" alt="Madusanka Serasinghe">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Madusanka Serasinghe</a></h3>
+                                            <span class="team-member__role">Manager Administration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Inura-Weerasinghe---Head-of-Human-Resources.jpeg" alt="Inura Weerasinghe">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Inura Weerasinghe</a></h3>
+                                            <span class="team-member__role">Head of Human Resources</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/V.-Dinesh---Assistant-General-Manager-Operations.jpeg" alt="V. Dinesh">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">V. Dinesh</a></h3>
+                                            <span class="team-member__role">Assistant General Manager Operations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Sudesh-Jeewatntha---Head-of-Recovery.jpeg" alt="Sudesh Jeewatntha">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Sudesh Jeewatntha</a></h3>
+                                            <span class="team-member__role">Head of Recovery</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Taniya-Roshel---Assistant-Manager-Business-Operations.jpeg" alt="Taniya Roshel">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Taniya Roshel</a></h3>
+                                            <span class="team-member__role">Assistant Manager Business Operations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Dilshan-Isuranga---Head-of-Finance.PNG" alt="Dilshan Isuranga">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Dilshan Isuranga</a></h3>
+                                            <span class="team-member__role">Head of Finance</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Sithija-Mataraarachchi---Manager-Call-Center-&-Customer-Service.png" alt="Sithija Mataraarachchi">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Sithija Mataraarachchi</a></h3>
+                                            <span class="team-member__role">Manager Call Center &amp; Customer Service</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Y.-Saranraj---Head-of-Gold-Loan.jpg" alt="Y. Saranraj">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Y. Saranraj</a></h3>
+                                            <span class="team-member__role">Head of Gold Loan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4 mb--40">
+                                    <div class="team-member__inner h-100 text-center">
+                                        <figure class="team-member__thumbnail mb--25">
+                                            <img src="assets/img/team/corporate-management/Wasantha-Pushpakumara---Regional-Manager.png" alt="Wasantha Pushpakumara">
+                                        </figure>
+                                        <div class="team-member__info p-4">
+                                            <h3 class="team-member__name"><a href="#">Wasantha Pushpakumara</a></h3>
+                                            <span class="team-member__role">Regional Manager</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 order-lg-1">
+                            <aside class="sidebar">
+                                <div class="widget mb--50">
+                                    <ul class="widget-menu">
+                                        <li><a href="about-us.html">Our Company</a></li>
+                                        <li><a href="team.html">Board of Directors</a></li>
+                                        <li class="active"><a href="corporate-management.html">Corporate Management</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="row mb--60">
+                        <div class="col-12">
+                            <div class="cta bg-color border-radius ptb--60 plr--45" data-bg-color="#202020">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 text-md-start text-center mb-sm--15">
+                                        <h3 class="color--white">You Need Help?</h3>
+                                    </div>
+                                    <div class="col-md-6 mb-sm--20"></div>
+                                    <div class="col-md-3 text-md-end text-center">
+                                        <a href="contact-us.html" class="btn btn-2">
+                                            Contact Us <i class="fa fa-caret-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Content Area End -->
+            <!-- Contact Info Area Start -->
+            <div class="home-contact-area ptb--25 ptb-md--35 bg-color" data-bg-color="#2C5390">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 mb-md--20">
+                            <div class="home-contact">
+                                <div class="home-contact__icon">
+                                    <div class="icon icon-rounded icon-big icon-hover-1">
+                                        <i class="pe-7s-call bg--white-light"></i>
+                                    </div>
+                                </div>
+                                <div class="home-contact__info">
+                                    <span class="home-contact__small">Call Us Now</span>
+                                    <span class="home-contact__big">0117 111 112</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-md--20">
+                            <div class="home-contact">
+                                <div class="home-contact__icon">
+                                    <div class="icon icon-rounded icon-big icon-hover-1">
+                                        <i class="pe-7s-mail-open-file bg--white-light"></i>
+                                    </div>
+                                </div>
+                                <div class="home-contact__info">
+                                    <span class="home-contact__small">Emal Us</span>
+                                    <span class="home-contact__big">info@cdff.lk</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="home-contact">
+                                <div class="home-contact__icon">
+                                    <div class="icon icon-rounded icon-big icon-hover-1">
+                                        <i class="pe-7s-map-marker bg--white-light"></i>
+                                    </div>
+                                </div>
+                                <div class="home-contact__info">
+                                    <span class="home-contact__small">Our Company</span>
+                                    <span class="home-contact__big">No.667, Colombo Road,Ja-Ela, Sri Lanka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Contact Info Area End -->
+        </div>
+        <!-- Main Content Wrapper End -->
+        <!-- Footer Start-->
+        <footer class="footer">
+            <div class="footer-top border-bottom-2 pt--70 pt-md--85 pb--45 pb-lg--40 pb-md--65">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--45">
+                            <div class="footer-widget">
+                                <div class="textwidget">
+                                    <a href="index.aspx" class="d-block">
+                                        <img src="assets/img/logo/logo_02.png" alt="Logo" class="footer-logo mb--30">
+                                    </a>
+                                    <p class="mb--40">CDFF is one of the world’s leading financial Service providor.</p>
+                                    <p><i class="fa fa-map-marker"></i>No.667, Colombo Road,Ja-Ela, Sri Lanka</p>
+                                    <p><i class="fa fa-phone"></i>(+94) 117 111 112</p>
+                                    <p><i class="fa fa-envelope"></i><a href="maito:info@cdff.lk">info@cdff.lk</a></p>
+                                    <p><i class="fa fa-desktop"></i><a href="www.cdff.lk">www.cdff.lk</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--20">
+                            <div class="footer-widget">
+                                <h3 class="widget-title mb--20">Explore</h3>
+                                <ul class="widget-menu two-column-list">
+                                    <li><a href="index.aspx">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Bonds</a></li>
+                                    <li><a href="#">Commodities</a></li>
+                                    <li><a href="#">Investments</a></li>
+                                    <li><a href="#">Retirement</a></li>
+                                    <li><a href="#">Stocks</a></li>
+                                    <li><a href="#">Trades</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-widget">
+                                <h3 class="widget-title mb--20">Subscribe</h3>
+                                <div class="textwidget border-bottom-2 mb--30 pb--30">
+                                    <form action="https://company.us19.list-manage.com/subscribe/post?u=2f2631cacbe4767192d339ef2&amp;id=24db23e68a" class="newsletter mc-form mb--20" method="post" target="_blank">
+                                        <input type="email" class="newsletter__input" name="newsletter_email" id="newsletter_email" placeholder="Enter Your E-mail">
+                                        <button type="submit" class="newsletter__submit"><i class="fa fa-envelope"></i></button>
+                                    </form>
+                                    <p>Get latest updates and offers.</p>
+                                </div>
+                                <div class="textwidget">
+                                    <ul class="social social-with-text two-column-list">
+                                        <li class="social__item">
+                                            <a class="social__link" href="https://www.facebook.com" target="_blank" rel="noopener">
+                                                <i class="social__icon fa fa-facebook"></i>
+                                                <span class="social__text">Facebook</span>
+                                            </a>
+                                        </li>
+                         
+                                        <li class="social__item">
+                                            <a class="social__link" href="https://www.linkedin.com" target="_blank" rel="noopener">
+                                                <i class="social__icon fa fa-linkedin"></i>
+                                                <span class="social__text">Linkedin</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom ptb--30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="copyright-text">&copy; CDFF 2026 Made With <i class="fa fa-heart"></i> by <a href="https://dinuro.com" target="_blank" rel="noopener">DINUROZ PRIVATE LIMITED</a></p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <ul class="footer-menu">
+                                <li><a href="">Legal</a></li>
+                                <li><a href="">Sitemap</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer End-->
+        <!-- Global Overlay Start -->
+        <div class="fp-global-overlay"></div>
+        <!-- Global Overlay End -->
+        <!-- Global Overlay Start -->
+        <a class="scroll-to-top" href=""><i class="fa fa-angle-up"></i></a>
+        <!-- Global Overlay End -->
+        <!-- Searchform Popup Start -->
+        <div class="popup-search" id="searchForm">
+            <div class="popup-search__body">
+                <a href="#" class="btn-close"><i class="fa fa-times"></i></a>
+                <form action="#" class="searchform">
+                    <input type="text" name="popup-search" id="popup-search" class="searchform__input"
+                           placeholder="Search...">
+                    <button type="submit" class="searchform__submit"></button>
+                </form>
+                <p>* Type a keyword then press Enter</p>
+            </div>
+        </div>
+        <!-- Searchform Popup End -->
+  
+    </div>
+    <!-- Main Wrapper End -->
+    <!-- ************************* JS Files ************************* -->
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="assets/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS (Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading) -->
+    <script src="assets/js/revoulation/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.migration.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/js/revoulation/revolution.extension.video.min.js"></script>
+    <!-- REVOLUTION JS ACTIVATION FILE -->
+    <script src="assets/js/revoulation.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

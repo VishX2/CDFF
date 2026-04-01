@@ -29,6 +29,71 @@
     <link rel="stylesheet" href="assets/css/style-customizer.css">
     <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
 
+    <style>
+        .careers-welcome-box,
+        .career-form-card,
+        .career-note-card {
+            background-color: #f8fbff;
+            border: 1px solid #d9e7f7;
+            border-radius: 10px;
+            padding: 35px;
+            height: 100%;
+        }
+
+        .careers-welcome-box {
+            border-left: 4px solid #2c5390;
+        }
+
+        .career-form-card .form__input,
+        .career-form-card textarea.form__input {
+            margin-bottom: 20px;
+        }
+
+        .career-form-card textarea.form__input {
+            min-height: 140px;
+            resize: vertical;
+            padding-top: 18px;
+        }
+
+        .career-file-label {
+            display: block;
+            font-weight: 600;
+            color: #0f2140;
+            margin-bottom: 10px;
+        }
+
+        .career-file-input {
+            display: block;
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d9e7f7;
+            border-radius: 6px;
+            background-color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .career-note-card ul {
+            margin-bottom: 0;
+            padding-left: 18px;
+        }
+
+        .career-modal .modal-content {
+            border: 0;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .career-modal .modal-header {
+            background-color: #2c5390;
+            color: #fff;
+            border-bottom: 0;
+        }
+
+        .career-modal .modal-title {
+            color: #fff;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -147,6 +212,11 @@
                                                             <span data-hover="Board of Directors" class="mm-text">Board of Directors</span>
                                                         </a>
                                                     </li>
+                                                    <li>
+                                                        <a href="corporate-management.html">
+                                                            <span data-hover="Corporate Management" class="mm-text">Corporate Management</span>
+                                                        </a>
+                                                    </li>
                                                     
                                                 </ul>
                                             </li>
@@ -197,6 +267,70 @@
             </div>
             
             
+                    <div class="offcanvas-menu-wrapper" id="offcanvasMenu">
+                <div class="offcanvas-menu-inner">
+                    <a href="#" class="btn-close">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                    <nav class="offcanvas-navigation">
+                        <ul class="offcanvas-menu">
+                            <li><a href="index.html"><span class="mm-text">Home</span></a></li>
+                                                        <li class="menu-item-has-children">
+                                <a href="about-us.html"><span class="mm-text">About Us</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="about-us.html"><span class="mm-text">Our Company</span></a></li>
+                                    <li><a href="team.html"><span class="mm-text">Board of Directors</span></a></li>
+                                    <li><a href="corporate-management.html"><span class="mm-text">Corporate Management</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="our-services.html"><span class="mm-text">Services</span></a></li>
+                            <li><a href="news.html"><span class="mm-text">News</span></a></li>
+                            <li><a href="careers.html"><span class="mm-text">Careers</span></a></li>
+                            <li><a href="contact-us.html"><span class="mm-text">Contact Us</span></a></li>
+                        </ul>
+                        <div class="site-info vertical">
+                            <div class="site-info__item">
+                                <i class="pe-7s-call"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">0117 111 112</span>
+                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk</a></span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-map-marker"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">No.667, Colombo Road,</span>
+                                    <span class="site-info__text">Ja-Ela, Sri Lanka</span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-clock"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                    <span class="site-info__text">Monday to Saturday</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="social social-round white-color">
+                            <li class="social__item">
+                                <a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </header>
         <!-- Header End -->
 
@@ -233,55 +367,69 @@
             <!-- About Content Area Start -->
             <section class="careers-area">
                 <div class="container">
-                    <div class="row mb--25">
-                        <div class="col-12">
-                            <h3>Benefits Include</h3>
-                        </div>
-                    </div>
-                    <div class="row mb--60 mb-md--20">
-                        <div class="col-lg-4 mb-md--40">
-                            <div class="text-borderd-block">
-                                <p class="heading-color">
-                                    <strong class="d-block">What do we do?</strong>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique quam consectetur pulvinar vehicula. Nam dictum orci nec neque gravida pretium vitae sit amet lorem. Cras lobortis hendrerit arcu, vel tempus nunc viverra eget.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-md--40">
-                            <div class="text-borderd-block">
-                                <p class="heading-color">
-                                    <strong class="d-block">What industries do you specialize in?</strong>
-                                    Sed odio nisl, porta a ex quis, cursus auctor mi. Aliquam luctus mi vitae dui cursus, eget auctor nibh gravida. Praesent nec est fringilla, mollis justo et, fermentum diam. Ut vitae mi viverra, auctor justo sed, condimentum odio. Vivamus vitae euismod libero.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-md--40">
-                            <div class="text-borderd-block">
-                                <p class="heading-color">
-                                    <strong class="d-block">Can you help us raise money?</strong>
-                                    Sed odio nisl, porta a ex quis, cursus auctor mi. Aliquam luctus mi vitae dui cursus, eget auctor nibh gravida. Praesent nec est fringilla, mollis justo et, fermentum diam. Ut vitae mi viverra, auctor justo sed, condimentum odio. Vivamus vitae euismod libero.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row mb--40">
-                        <div class="col-md-4 mb-sm--40">
-                            <figure>
-                                <img src="assets/img/about/about13.jpg" alt="About Us" class="w-100">
-                            </figure>
-                        </div>
-                        <div class="col-md-8">
-                            <figure>
-                                <img src="assets/img/about/about14.jpg" alt="About Us">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="row mb--50 mb-md--45">
                         <div class="col-12">
-                            <p>We care for our clientsÃ¢â‚¬â„¢ business as our business. We think and act like business partners, not academic advisors. We share our clientsÃ¢â‚¬â„¢ aspirations, work to understand their reality, and align our incentives with their objectives Ã¢â‚¬â€ so they know weÃ¢â‚¬â„¢re in this together.</p>
+                            <div class="careers-welcome-box">
+                                <h3 class="mb--20">Welcome to Our Careers Page</h3>
+                                <p>Dear Candidate,</p>
+                                <p>Thank you for your interest in joining CDFF. We invite you to submit your CV for consideration for current and future opportunities. Our recruitment team will carefully review your profile and get in touch if your qualifications match our requirements.</p>
+                                <p>We value your interest in contributing to our team and look forward to connecting with you.</p>
+                                <p class="mb--0"><strong>Team Human Resources</strong><br>Ceylon Development Funding Force</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row mb--60">
+                        <div class="col-lg-7 mb-md--40">
+                            <div class="career-form-card">
+                                <h3 class="mb--15">Submit Your CV</h3>
+                                <p class="mb--30">Share your details with us and our recruitment team will review your application for suitable current and future openings.</p>
+                                <form action="#" class="form" id="careerCvForm">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" name="candidate_name" id="candidate_name" class="form__input" placeholder="Full Name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" name="candidate_email" id="candidate_email" class="form__input" placeholder="Email Address" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="tel" name="candidate_phone" id="candidate_phone" class="form__input" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" name="candidate_position" id="candidate_position" class="form__input" placeholder="Position Interested In">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="candidate_cv" class="career-file-label">Upload Your CV</label>
+                                            <input type="file" name="candidate_cv" id="candidate_cv" class="career-file-input" accept=".pdf,.doc,.docx" required>
+                                            <small>Accepted file formats: PDF, DOC, DOCX</small>
+                                        </div>
+                                        <div class="col-12 mt--20">
+                                            <textarea name="candidate_message" id="candidate_message" class="form__input" placeholder="Additional Message (Optional)"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-size-md btn-shape-square  bt-color-primary">Submit CV</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="career-note-card">
+                                <h3 class="mb--20">What Happens Next</h3>
+                                <p>Once you submit your CV, our team will assess your profile against available and future career opportunities at CDFF.</p>
+                                <ul>
+                                    <li>Your application will be reviewed by our Human Resources team.</li>
+                                    <li>Shortlisted candidates will be contacted directly.</li>
+                                    <li>Your profile may also be considered for future openings.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb--50 mb-md--45 d-none">
+                        <div class="col-12">
+                            <p>We care for our clients’ business as our business. We think and act like business partners, not academic advisors. We share our clients’ aspirations, work to understand their reality, and align our incentives with their objectives — so they know we’re in this together.</p>
+                        </div>
+                    </div>
+                    <div class="row mb--60 d-none">
                         <div class="col-12">
                             <h3 class="mb--30">Open Positions</h3>
                             <div class="job-listings">
@@ -392,14 +540,13 @@
                         <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--45">
                             <div class="footer-widget">
                                 <div class="textwidget">
-                                    <a href="index.html" class="d-block">
+                                    <a href="index.aspx" class="d-block">
                                         <img src="assets/img/logo/logo_02.png" alt="Logo" class="footer-logo mb--30">
                                     </a>
-                                    <p class="mb--40">CDFF is one of the worldÃ¢â‚¬â„¢s leading financial Service providor.</p>
+                                    <p class="mb--40">CDFF is one of the world’s leading financial Service providor.</p>
                                     <p><i class="fa fa-map-marker"></i>No.667, Colombo Road,Ja-Ela, Sri Lanka</p>
-                                    <p><i class="fa fa-id-badge"></i>BR No: PV00345944</p>
                                     <p><i class="fa fa-phone"></i>(+94) 117 111 112</p>
-                                    <p><i class="fa fa-envelope"></i><a href="mailto:info@cdff.lk">info@cdff.lk</a></p>
+                                    <p><i class="fa fa-envelope"></i><a href="maito:info@cdff.lk">info@cdff.lk</a></p>
                                     <p><i class="fa fa-desktop"></i><a href="www.cdff.lk">www.cdff.lk</a></p>
                                 </div>
                             </div>
@@ -408,12 +555,12 @@
                             <div class="footer-widget">
                                 <h3 class="widget-title mb--20">Explore</h3>
                                 <ul class="widget-menu two-column-list">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="our-services.html">Services</a></li>
+                                    <li><a href="index.aspx">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
                                     <li><a href="#">Testimonials</a></li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="contact-us.html">Contact Us</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
                                     <li><a href="#">Bonds</a></li>
                                     <li><a href="#">Commodities</a></li>
                                     <li><a href="#">Investments</a></li>
@@ -436,14 +583,14 @@
                                 <div class="textwidget">
                                     <ul class="social social-with-text two-column-list">
                                         <li class="social__item">
-                                            <a class="social__link" href="https://www.facebook.com/CDFFPvtLtd" target="_blank" rel="noopener">
+                                            <a class="social__link" href="https://www.facebook.com" target="_blank" rel="noopener">
                                                 <i class="social__icon fa fa-facebook"></i>
                                                 <span class="social__text">Facebook</span>
                                             </a>
                                         </li>
-                                        
+                         
                                         <li class="social__item">
-                                            <a class="social__link" href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" target="_blank" rel="noopener">
+                                            <a class="social__link" href="https://www.linkedin.com" target="_blank" rel="noopener">
                                                 <i class="social__icon fa fa-linkedin"></i>
                                                 <span class="social__text">Linkedin</span>
                                             </a>
@@ -459,7 +606,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start">
-                            <p class="copyright-text">&copy; Sanders 2021 Made With <i class="fa fa-heart"></i> by <a href="https://hasthemes.com" target="_blank" rel="noopener">HasThemes</a></p>
+                            <p class="copyright-text">&copy; CDFF 2026 Made With <i class="fa fa-heart"></i> by <a href="https://dinuro.com" target="_blank" rel="noopener">DINUROZ PRIVATE LIMITED</a></p>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <ul class="footer-menu">
@@ -472,6 +619,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- Footer End-->
 
         <!-- Global Overlay Start -->
@@ -494,6 +642,24 @@
             </div>
         </div>
         <!-- Searchform Popup End -->
+
+        <div class="modal fade career-modal" id="careerSubmitModal" tabindex="-1" aria-labelledby="careerSubmitModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="careerSubmitModalLabel">Application Received</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <p>Dear Candidate,</p>
+                        <p>Thank you for submitting your CV to Ceylon Development Funding Force. We sincerely appreciate the time and effort you have taken to share your profile with us.</p>
+                        <p>Our recruitment team will carefully review your application and contact you should your qualifications match any current or future opportunities.</p>
+                        <p>We truly value your interest in being part of CDFF and thank you again for considering a career with us.</p>
+                        <p class="mb--0">Warm regards,<br>Ceylon Development Funding Force</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Color Variation Start -->
         <div class="style-customizer closed">
@@ -553,7 +719,35 @@
     <!-- REVOLUTION JS ACTIVATION FILE -->
     <script src="assets/js/revoulation.js"></script>
 
+    <script>
+        (function () {
+            var careerForm = document.getElementById('careerCvForm');
+            var modalElement = document.getElementById('careerSubmitModal');
+
+            if (!careerForm || !modalElement || typeof bootstrap === 'undefined') {
+                return;
+            }
+
+            var careerModal = new bootstrap.Modal(modalElement);
+
+            careerForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                if (!careerForm.checkValidity()) {
+                    careerForm.reportValidity();
+                    return;
+                }
+
+                careerModal.show();
+                careerForm.reset();
+            });
+        })();
+    </script>
+
 
 </body>
 
 </html>
+
+
+

@@ -12,7 +12,6 @@
     <link rel="apple-touch-icon" href="assets/img/icon1.png">
 
     <!-- ************************* CSS Files ************************* -->
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
@@ -35,9 +34,9 @@
             flex-wrap: wrap;
         }
 
-        .services-area .row.mb--10 > [class*="col-"] {
-            display: flex;
-        }
+            .services-area .row.mb--10 > [class*="col-"] {
+                display: flex;
+            }
 
         .services-area .services-item {
             display: flex;
@@ -55,12 +54,12 @@
             overflow: hidden;
         }
 
-        .services-area .services-item__thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+            .services-area .services-item__thumbnail img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
 
         .services-area .services-item__info {
             flex: 1;
@@ -79,17 +78,112 @@
     <!-- Style customizer (Remove these two lines please) -->
     <link rel="stylesheet" href="assets/css/style-customizer.css">
     <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
+    <style>
+        .service-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            align-items: flex-start; /* ðŸ”¥ this fixes spacing issue */
+            /* âŒ REMOVE height */
+            /* height: 180px; */
+        }
+
+        .service-img {
+            width: 200px;
+            height: 145px;
+            flex-shrink: 0;
+        }
+
+            .service-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                background: #f7f9fc;
+                border-radius: 6px;
+            }
+
+        .service-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+            .service-content h3 {
+                margin-bottom: 5px;
+            }
+
+        .short-text {
+            display: block;
+        }
+
+        .full-text {
+            display: none;
+        }
+
+        .service-action {
+            width: 150px;
+            text-align: right;
+        }
+
+        @media (max-width: 767px) {
+            .services-area .row.mb--10 {
+                display: block;
+            }
+
+            .service-row {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 14px;
+                padding: 14px;
+                margin-bottom: 16px;
+                border: 1px solid #e7eaf0;
+                border-radius: 12px;
+                background: #ffffff;
+            }
+
+            .service-img {
+                width: 100%;
+                height: 220px;
+            }
+
+            .service-img img {
+                object-fit: contain;
+                background: #f7f9fc;
+                border-radius: 10px;
+            }
+
+            .service-content {
+                padding: 0;
+            }
+
+            .service-content h3 {
+                margin-bottom: 8px;
+            }
+
+            .service-action {
+                width: 100%;
+                text-align: left;
+            }
+
+            .service-action .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
- 
+
     <!-- Main Wrapper Start -->
     <div class="wrapper">
         <!-- Header Start -->
         <header class="header">
             <div class="header__inner fixed-header">
-                
+
                 <div class="header__middle">
                     <div class="container">
                         <div class="row">
@@ -121,8 +215,8 @@
                                             <div class="site-info__item">
                                                 <i class="pe-7s-clock"></i>
                                                 <div class="site-info__content">
-                                                   <span class="site-info__title">8:30 AM - 5:00 PM</span>
-                                                    <span class="site-info__text">Monday to Saturday</span> 
+                                                    <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                                    <span class="site-info__text">Monday to Saturday</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -179,9 +273,9 @@
                                                 <a href="index.html" class="mainmenu__link">
                                                     <span data-hover="Home" class="mm-text">Home</span>
                                                 </a>
-                                        
+
                                             </li>
-                                            
+
                                             <li class="mainmenu__item menu-item-has-children">
                                                 <a href="about-us.html" class="mainmenu__link">
                                                     <span data-hover="About Us" class="mm-text">About Us</span>
@@ -192,13 +286,18 @@
                                                             <span data-hover="Our Company" class="mm-text">Our Company</span>
                                                         </a>
                                                     </li>
-                                                    
+
                                                     <li>
                                                         <a href="team.html">
                                                             <span data-hover="Board of Directors" class="mm-text">Board of Directors</span>
                                                         </a>
                                                     </li>
-                                                    
+                                                    <li>
+                                                        <a href="corporate-management.html">
+                                                            <span data-hover="Corporate Management" class="mm-text">Corporate Management</span>
+                                                        </a>
+                                                    </li>
+
                                                 </ul>
                                             </li>
 
@@ -212,7 +311,7 @@
                                                 <a href="news-details-gallery.html" class="mainmenu__link">
                                                     <span data-hover="Gallery" class="mm-text">Gallery </span>
                                                 </a>
-                                                
+
                                             </li>
 
 
@@ -220,13 +319,13 @@
                                                 <a href="careers.html" class="mainmenu__link">
                                                     <span data-hover="Careers" class="mm-text"> Careers</span>
                                                 </a>
-                                                 
+
                                             </li>
                                             <li class="mainmenu__item menu-item-has-children">
                                                 <a href="csr.html" class="mainmenu__link">
-                                                    <span data-hover="CSR" class="mm-text">CSR</span>
+                                                    <span data-hover="Latest News" class="mm-text">Latest News</span>
                                                 </a>
-                                              
+
                                             </li>
                                             <li class="mainmenu__item menu-item-has-children">
                                                 <a href="contact-us.html" class="mainmenu__link">
@@ -246,8 +345,72 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
+                    <div class="offcanvas-menu-wrapper" id="offcanvasMenu">
+                <div class="offcanvas-menu-inner">
+                    <a href="#" class="btn-close">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                    <nav class="offcanvas-navigation">
+                        <ul class="offcanvas-menu">
+                            <li><a href="index.html"><span class="mm-text">Home</span></a></li>
+                                                        <li class="menu-item-has-children">
+                                <a href="about-us.html"><span class="mm-text">About Us</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="about-us.html"><span class="mm-text">Our Company</span></a></li>
+                                    <li><a href="team.html"><span class="mm-text">Board of Directors</span></a></li>
+                                    <li><a href="corporate-management.html"><span class="mm-text">Corporate Management</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="our-services.html"><span class="mm-text">Services</span></a></li>
+                            <li><a href="news.html"><span class="mm-text">News</span></a></li>
+                            <li><a href="careers.html"><span class="mm-text">Careers</span></a></li>
+                            <li><a href="contact-us.html"><span class="mm-text">Contact Us</span></a></li>
+                        </ul>
+                        <div class="site-info vertical">
+                            <div class="site-info__item">
+                                <i class="pe-7s-call"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">0117 111 112</span>
+                                    <span class="site-info__text"><a href="mailto:info@cdff.lk">info@cdff.lk</a></span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-map-marker"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">No.667, Colombo Road,</span>
+                                    <span class="site-info__text">Ja-Ela, Sri Lanka</span>
+                                </div>
+                            </div>
+                            <div class="site-info__item">
+                                <i class="pe-7s-clock"></i>
+                                <div class="site-info__content">
+                                    <span class="site-info__title">8:30 AM - 5:00 PM</span>
+                                    <span class="site-info__text">Monday to Saturday</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="social social-round white-color">
+                            <li class="social__item">
+                                <a href="https://www.facebook.com/CDFFPvtLtd" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.instagram.com/cdffpvtltd/" class="social__link" target="_blank" rel="noopener">
+                                    <i class="social__icon fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </header>
         <!-- Header End -->
         <!-- Page Title Area Start -->
@@ -297,62 +460,150 @@
             <div class="services-area">
                 <div class="container">
                     <div class="row mb--10">
-                        <div class="col-lg-6 col-md-6 mb--45">
-                            <div class="services-item directional">
-                                <figure class="services-item__thumbnail mb--35">
-                                    <img src="assets/img/services/service1.jpg" alt="services">
-                                    <div class="services-item__overlay directional-hover">
-                                        <a href="#"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </figure>
-                                <div class="services-item__info no-icon">
-                                    <h3 class="heading__tertiary mb--5"><a href="#">Motor Loans</a></h3>
-                                    <p class="services-item__desc">CDFF Motor Loans offer affordable and structured vehicle financing solutions for personal and commercial use.</p>
-                                </div>
+                        <div class="service-row">
+
+                            <!-- Image -->
+                            <div class="service-img">
+                                <img src="assets/img/services/micro-loans.jpg" alt="Micro Loans">
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb--45">
-                            <div class="services-item directional">
-                                <figure class="services-item__thumbnail mb--35">
-                                    <img src="assets/img/services/service2.jpg" alt="services">
-                                    <div class="services-item__overlay directional-hover">
-                                        <a href="#"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </figure>
-                                <div class="services-item__info no-icon">
-                                    <h3 class="heading__tertiary mb--5"><a href="#">Mortgage Loans</a></h3>
-                                    <p class="services-item__desc">Our Mortgage Loan solutions provide customers with access to long-term financing for property purchase, construction, or improvement.</p>
-                                </div>
+
+                            <!-- Description -->
+                            <div class="service-content">
+                                <h3>Micro Loans</h3>
+                                <p class="short-text">
+                                    CDFF Micro Loans are designed to support small-scale business ventures and personal financial needs with flexible repayment terms.
+                                </p>
+
+                                <p class="full-text">
+                                    CDFF Micro Loans are designed to support small-scale business ventures and personal financial needs with flexible repayment terms.
+                                </p>
+
+                                <a href="#" class="view-more">View More</a>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb--45">
-                            <div class="services-item directional">
-                                <figure class="services-item__thumbnail mb--35">
-                                    <img src="assets/img/services/service3.jpg" alt="services">
-                                    <div class="services-item__overlay directional-hover">
-                                        <a href="#"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </figure>
-                                <div class="services-item__info no-icon">
-                                    <h3 class="heading__tertiary mb--5"><a href="#">Business Loans</a></h3>
-                                    <p class="services-item__desc">CDFF Business Loans are structured to strengthen small and medium-scale enterprises by providing capital for expansion, equipment purchase, operational enhancement, and cash flow management.</p>
-                                </div>
+
+                            <!-- Button -->
+                            <div class="service-action">
+                                <a href="#" class="btn btn-primary">Register</a>
                             </div>
+
                         </div>
-                        <div class="col-lg-6 col-md-6 mb--45">
-                            <div class="services-item directional">
-                                <figure class="services-item__thumbnail mb--35">
-                                    <img src="assets/img/services/service4.jpg" alt="services">
-                                    <div class="services-item__overlay directional-hover">
-                                        <a href="#"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </figure>
-                                <div class="services-item__info no-icon">
-                                    <h3 class="heading__tertiary mb--5"><a href="#">Pawning Services</a></h3>
-                                    <p class="services-item__desc">Our Pawning Services offer secure and immediate liquidity solutions through professional asset valuation and transparent lending practices. Designed to provide short-term financial relief, this facility enables customers to access funds quickly while maintaining trust, confidentiality, and fair valuation standards.</p>
-                                </div>
+
+                        <div class="service-row">
+
+                            <!-- Image -->
+                            <div class="service-img">
+                                <img src="assets/img/services/service1.jpg" alt="">
                             </div>
+
+                            <!-- Description -->
+                            <div class="service-content">
+                                <h3>Motor Loans</h3>
+                                <p class="short-text">
+                                    CDFF Motor Loans offer affordable and structured vehicle financing...
+                                </p>
+
+                                <p class="full-text">
+                                    CDFF Motor Loans offer affordable and structured vehicle financing solutions for personal and commercial use. Flexible repayment options and quick approvals available.
+                                </p>
+
+                                <a href="#" class="view-more">View More</a>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="service-action">
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+
                         </div>
+
+                        <div class="service-row">
+
+                            <!-- Image -->
+                            <div class="service-img">
+                                <img src="assets/img/services/service2.jpg" alt="">
+                            </div>
+
+                            <!-- Description -->
+                            <div class="service-content">
+                                <h3>Mortgage Loans</h3>
+                                <p class="short-text">
+                                    Our Mortgage Loan solutions provide customers with access to long-term financing for property purchase, construction, or improvement....
+                                </p>
+
+                                <p class="full-text">
+                                    Our Mortgage Loan solutions provide customers with access to long-term financing for property purchase, construction, or improvement.
+                                </p>
+
+                                <a href="#" class="view-more">View More</a>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="service-action">
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-row">
+
+                            <!-- Image -->
+                            <div class="service-img">
+                                <img src="assets/img/services/service3.jpg" alt="">
+                            </div>
+
+                            <!-- Description -->
+                            <div class="service-content">
+                                <h3>Business Loans</h3>
+                                <p class="short-text">
+                                    CDFF Business Loans are structured to strengthen small and medium-scale enterprises by providing capital for expansion, equipment purchase, operational enhancement, and cash flow management....
+                                </p>
+
+                                <p class="full-text">
+                                    CDFF Business Loans are structured to strengthen small and medium-scale enterprises by providing capital for expansion, equipment purchase, operational enhancement, and cash flow management.
+                                </p>
+
+                                <a href="#" class="view-more">View More</a>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="service-action">
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-row">
+
+                            <!-- Image -->
+                            <div class="service-img">
+                                <img src="assets/img/services/service4.jpg" alt="">
+                            </div>
+
+                            <!-- Description -->
+                            <div class="service-content">
+                                <h3>Pawning Services</h3>
+                                <p class="short-text">
+                                    Our Pawning Services offer secure and immediate liquidity solutions through professional asset valuation and transparent lending practices. Designed to provide short-term financial relief, this facility enables customers to access funds quickly while maintaining trust, confidentiality, and fair valuation standards....
+                                </p>
+
+                                <p class="full-text">
+                                    Our Pawning Services offer secure and immediate liquidity solutions through professional asset valuation and transparent lending practices. Designed to provide short-term financial relief, this facility enables customers to access funds quickly while maintaining trust, confidentiality, and fair valuation standards.
+                                </p>
+
+                                <a href="#" class="view-more">View More</a>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="service-action">
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -367,14 +618,13 @@
                         <div class="col-md-6 col-lg-4 mb-md--30 mb-sm--45">
                             <div class="footer-widget">
                                 <div class="textwidget">
-                                    <a href="index.html" class="d-block">
+                                    <a href="index.aspx" class="d-block">
                                         <img src="assets/img/logo/logo_02.png" alt="Logo" class="footer-logo mb--30">
                                     </a>
-                                    <p class="mb--40">CDFF is one of the worldÃ¢â‚¬â„¢s leading financial Service providor.</p>
+                                    <p class="mb--40">CDFF is one of the world’s leading financial Service providor.</p>
                                     <p><i class="fa fa-map-marker"></i>No.667, Colombo Road,Ja-Ela, Sri Lanka</p>
-                                    <p><i class="fa fa-id-badge"></i>BR No: PV00345944</p>
                                     <p><i class="fa fa-phone"></i>(+94) 117 111 112</p>
-                                    <p><i class="fa fa-envelope"></i><a href="mailto:info@cdff.lk">info@cdff.lk</a></p>
+                                    <p><i class="fa fa-envelope"></i><a href="maito:info@cdff.lk">info@cdff.lk</a></p>
                                     <p><i class="fa fa-desktop"></i><a href="www.cdff.lk">www.cdff.lk</a></p>
                                 </div>
                             </div>
@@ -383,12 +633,12 @@
                             <div class="footer-widget">
                                 <h3 class="widget-title mb--20">Explore</h3>
                                 <ul class="widget-menu two-column-list">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="our-services.html">Services</a></li>
+                                    <li><a href="index.aspx">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
                                     <li><a href="#">Testimonials</a></li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="contact-us.html">Contact Us</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
                                     <li><a href="#">Bonds</a></li>
                                     <li><a href="#">Commodities</a></li>
                                     <li><a href="#">Investments</a></li>
@@ -411,14 +661,14 @@
                                 <div class="textwidget">
                                     <ul class="social social-with-text two-column-list">
                                         <li class="social__item">
-                                            <a class="social__link" href="https://www.facebook.com/CDFFPvtLtd" target="_blank" rel="noopener">
+                                            <a class="social__link" href="https://www.facebook.com" target="_blank" rel="noopener">
                                                 <i class="social__icon fa fa-facebook"></i>
                                                 <span class="social__text">Facebook</span>
                                             </a>
                                         </li>
-                                        
+                         
                                         <li class="social__item">
-                                            <a class="social__link" href="https://www.linkedin.com/company/ceylon-development-funding-force-cdff/" target="_blank" rel="noopener">
+                                            <a class="social__link" href="https://www.linkedin.com" target="_blank" rel="noopener">
                                                 <i class="social__icon fa fa-linkedin"></i>
                                                 <span class="social__text">Linkedin</span>
                                             </a>
@@ -434,7 +684,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start">
-                            <p class="copyright-text">&copy; Sanders 2021 Made With <i class="fa fa-heart"></i> by <a href="https://hasthemes.com" target="_blank" rel="noopener">HasThemes</a></p>
+                            <p class="copyright-text">&copy; CDFF 2026 Made With <i class="fa fa-heart"></i> by <a href="https://dinuro.com" target="_blank" rel="noopener">DINUROZ PRIVATE LIMITED</a></p>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <ul class="footer-menu">
@@ -447,6 +697,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- Footer End-->
         <!-- Global Overlay Start -->
         <div class="fp-global-overlay"></div>
@@ -466,40 +717,13 @@
             </div>
         </div>
         <!-- Searchform Popup End -->
-        <!-- Color Variation Start -->
-        <div class="style-customizer closed">
-            <div class="buy-button">
-                <a class="opener" href="#"><i class="fa fa-cog fa-spin"></i></a>
-            </div>
-            <div class="clearfix content-chooser">
-                <h3>Color Schemes</h3>
-                <p>Which Template color you want to use? Select from here.</p>
-                <ul class="styleChange clearfix">
-                    <li class="skin-default selected" data-color="#014c8c" data-style="main"></li>
-                    <li class="skin-chill" data-color="#13909C" data-style="main-chill"></li>
-                    <li class="skin-dixie" data-color="#eb9d16" data-style="main-dixie"></li>
-                    <li class="skin-dodger" data-color="#3794f3" data-style="main-dodger"></li>
-                    <li class="skin-froly" data-color="#f17283" data-style="main-froly"></li>
-                    <li class="skin-green" data-color="#37f396" data-style="main-green"></li>
-                    <li class="skin-lime" data-color="#c8f905" data-style="main-lime"></li>
-                    <li class="skin-nova" data-color="#4d2a4f" data-style="main-nova"></li>
-                    <li class="skin-phant" data-color="#103754" data-style="main-phant"></li>
-                    <li class="skin-plum" data-color="#863C80" data-style="main-plum"></li>
-                    <li class="skin-red" data-color="#F33837" data-style="main-red"></li>
-                    <li class="skin-sandal" data-color="#a57e6f" data-style="main-sandal"></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Color Variation End -->
+
 
 
 
     </div>
     <!-- Main Wrapper End -->
- 
-
     <!-- ************************* JS Files ************************* -->
-
     <!-- jQuery JS -->
     <script src="assets/js/vendor.js"></script>
 
@@ -508,7 +732,7 @@
 
     <!-- REVOLUTION JS FILES -->
     <script src="assets/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>    
+    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
 
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
     <script src="assets/js/revoulation/revolution.extension.actions.min.js"></script>
@@ -525,6 +749,29 @@
     <script src="assets/js/revoulation.js"></script>
 
 
+    <script>
+        document.querySelectorAll('.view-more').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                let parent = this.closest('.service-content');
+                let shortText = parent.querySelector('.short-text');
+                let fullText = parent.querySelector('.full-text');
+
+                if (fullText.style.display === "none" || fullText.style.display === "") {
+                    fullText.style.display = "block";
+                    shortText.style.display = "none";
+                    this.innerText = "View Less";
+                } else {
+                    fullText.style.display = "none";
+                    shortText.style.display = "block";
+                    this.innerText = "View More";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
+
+

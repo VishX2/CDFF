@@ -3156,6 +3156,23 @@ a, a:hover, a:focus, a:active, button, button:focus, input, select, textarea, .s
     margin-top: 35px; }
   .offcanvas-navigation .social {
     margin-top: 32px; }
+@media (max-width: 35.94em) {
+  .offcanvas-navigation .site-info.vertical .site-info__item {
+    margin-bottom: 10px;
+  }
+  .offcanvas-navigation .site-info__item i {
+    font-size: 30px;
+    padding-right: 2px;
+  }
+  .offcanvas-navigation .site-info__title,
+  .offcanvas-navigation .site-info__text {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .offcanvas-navigation .site-info {
+    margin-top: 24px;
+  }
+}
 
 /*-- 30.02 - Top Menu --*/
 .top-menu li {
