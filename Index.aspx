@@ -31,6 +31,44 @@
     <!-- Style customizer (Remove these two lines please) -->
     <link rel="stylesheet" href="assets/css/style-customizer.css">
     <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
+    <style>
+        .latest-news-equal .col-md-6 {
+            display: flex;
+        }
+
+        .latest-news-equal .mini-blog {
+            width: 100%;
+        }
+
+        .latest-news-equal .mini-blog__inner {
+            display: flex;
+            height: 100%;
+            align-items: stretch;
+        }
+
+        .latest-news-equal .mini-blog__thumbnail {
+            display: flex;
+            min-height: 230px;
+        }
+
+        .latest-news-equal .mini-blog__thumbnail .image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .latest-news-equal .mini-blog__thumbnail .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .latest-news-equal .mini-blog__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
 
 </head>
 
@@ -887,7 +925,7 @@
             <!-- Testimonial Area End -->
             
             <!-- Mini Blog Area Start -->
-            <section class="mini-blog-area mb--100 mb-sm--50">
+            <section class="mini-blog-area latest-news-equal mb--100 mb-sm--50">
                 <div class="container">
                     <div class="row mb--45">
                         <div class="col-12 text-center">
@@ -923,16 +961,16 @@
                                         <figure class="image">
                                             <img src="assets/img/blog/news3-270x230.jpg" alt="Blog">
                                         </figure>
-                                        <span class="mini-blog__date">15 <br> Mar</span>
+                                        <span class="mini-blog__date">24 <br> Jan</span>
                                     </div>
                                     <div class="mini-blog__info">
                                         <h3 class="mini-blog__title">
-                                            <a href="news-details-image.html">Why Do I Need To Use Financial Consulting Service?</a>
+                                            <a href="news-details-image-2.html">PLATINUM EXCELLENCE AWARD 2026</a>
                                         </h3>
                                         <div class="mini-blog__content">
-                                            <p>Financial services must tie these three factors together - customer experience,...</p>
+                                            <p>CDFF proudly celebrates this recognition for financial inclusion and community empowerment across Sri Lanka.</p>
                                         </div>
-                                        <a href="news-details-image.html" class="read-more btn btn-no-bg btn-color-blue">Read More <i class="fa fa-caret-right"></i></a>
+                                        <a href="news-details-image-2.html" class="read-more btn btn-no-bg btn-color-blue">Read More <i class="fa fa-caret-right"></i></a>
                                     </div>
                                 </div>
                             </article>
