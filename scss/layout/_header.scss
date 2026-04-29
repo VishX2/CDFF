@@ -278,6 +278,91 @@
 			@extend %primary-color;
 		}
 	}
+	&__item--has-popup{
+		cursor: default;
+
+		.site-info__content{
+			@extend %posrelative;
+		}
+
+		&:after{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 16px;
+			content: '';
+		}
+	}
+	&__popup{
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 50%;
+		width: 320px;
+		max-width: min(320px, calc(100vw - 32px));
+		padding: 12px;
+		background-color: $color-white;
+		border: 1px solid rgba(34, 24, 21, 0.12);
+		border-radius: 12px;
+		box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
+		color: $body-color;
+		line-height: 1.6;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: auto;
+		transform: translate(-50%, 10px);
+		transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+		z-index: 10;
+
+		&:before{
+			position: absolute;
+			top: -8px;
+			left: 50%;
+			width: 16px;
+			height: 16px;
+			background-color: $color-white;
+			border-top: 1px solid rgba(34, 24, 21, 0.12);
+			border-left: 1px solid rgba(34, 24, 21, 0.12);
+			content: '';
+			transform: translateX(-50%) rotate(45deg);
+		}
+	}
+	&__popup-map-wrap{
+		display: block;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: #eef2f6;
+	}
+	&__popup-map{
+		display: block;
+		width: 100%;
+		height: 180px;
+		border: 0;
+		pointer-events: auto;
+	}
+	&__popup-label{
+		display: block;
+		margin-bottom: 4px;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: .08em;
+		text-transform: uppercase;
+		color: $color-brown;
+	}
+	&__popup-text{
+		display: block;
+		font-size: 14px;
+		line-height: 1.7;
+		color: $heading-color;
+	}
+	&__item--has-popup:hover &__popup,
+	&__item--has-popup.is-popup-open &__popup,
+	&__item--has-popup:focus-within &__popup{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-50%, 0);
+	}
 	&__title{
 	    @extend %heading-color;
 	    font-weight: 600;
@@ -307,6 +392,26 @@
 			}
 			&__text{
 				@extend %body-color;
+			}
+		}
+	}
+
+	&.vertical{
+		.site-info{
+			&__popup{
+				left: 0;
+				max-width: calc(100vw - 48px);
+				transform: translateY(10px);
+
+				&:before{
+					left: 28px;
+					transform: rotate(45deg);
+				}
+			}
+			&__item--has-popup.is-popup-open .site-info__popup,
+			&__item--has-popup:hover .site-info__popup,
+			&__item--has-popup:focus-within .site-info__popup{
+				transform: translateY(0);
 			}
 		}
 	}

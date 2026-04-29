@@ -2,6 +2,12 @@
 
 	'use strict';
 
+	var HEADER_LOCATION = {
+		label: 'No.667, Colombo Road, Ja-Ela, Sri Lanka',
+		lat: 7.0746,
+		lng: 79.8910
+	};
+
     // Check if element exists
     $.fn.elExists = function() {
         return this.length > 0;
@@ -84,6 +90,39 @@
     });
 
 	/**********************
+	* Header Call Shortcut
+	***********************/
+
+	$('.header .site-info__item').each(function(){
+		var $item = $(this),
+			$icon = $item.find('i').first(),
+			$title = $item.find('.site-info__title').first(),
+			phoneNumber = $.trim($title.text()),
+			sanitizedPhoneNumber = phoneNumber.replace(/[^+\d]/g, '');
+
+		if (!$icon.hasClass('pe-7s-call') || !sanitizedPhoneNumber) {
+			return;
+		}
+
+		$icon.attr({
+			'role': 'link',
+			'tabindex': '0',
+			'aria-label': 'Call ' + phoneNumber,
+			'title': 'Call ' + phoneNumber
+		});
+		$icon.css('cursor', 'pointer');
+
+		$icon.on('click keydown', function(e){
+			if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') {
+				return;
+			}
+
+			e.preventDefault();
+			window.location.href = 'tel:' + sanitizedPhoneNumber;
+		});
+	});
+
+	/**********************
 	* Sticky Header
 	***********************/
 
@@ -96,6 +135,77 @@
 	        $('.fixed-header').removeClass('sticky-header');
 	    }
 	});	
+
+	/**********************
+	* Header Location Popup
+	***********************/
+
+	$('.header .site-info__item').each(function(index){
+		var $item = $(this),
+			$icon = $item.find('i').first(),
+			$title = $item.find('.site-info__title').first(),
+			$text = $item.find('.site-info__text').first(),
+			titleText = $.trim($title.text()),
+			bodyText = $.trim($text.text()),
+			fullAddress = $.trim($item.data('mapAddress') || HEADER_LOCATION.label || (titleText + ' ' + bodyText)),
+			lat = parseFloat($item.data('mapLat')),
+			lng = parseFloat($item.data('mapLng')),
+			mapLat = !isNaN(lat) ? lat : HEADER_LOCATION.lat,
+			mapLng = !isNaN(lng) ? lng : HEADER_LOCATION.lng,
+			mapEmbedSrc = 'https://www.google.com/maps?hl=en&z=17&output=embed&ll=' + mapLat + ',' + mapLng + '&q=' + mapLat + ',' + mapLng + '+(' + encodeURIComponent(fullAddress) + ')',
+			popupId = 'site-info-popup-' + index;
+
+		if (!$icon.hasClass('pe-7s-map-marker') || !titleText || !bodyText || $item.find('.site-info__popup').length) {
+			return;
+		}
+
+		$item.addClass('site-info__item--has-popup');
+		$item.attr('tabindex', '0');
+		$item.attr('aria-describedby', popupId);
+		$icon.attr({
+			'role': 'button',
+			'tabindex': '0',
+			'aria-expanded': 'false',
+			'aria-controls': popupId,
+			'title': 'Show location map'
+		});
+		$icon.css('cursor', 'pointer');
+
+		$item.append(
+			'<span class="site-info__popup" id="' + popupId + '" role="tooltip">' +
+				'<span class="site-info__popup-map-wrap">' +
+					'<iframe class="site-info__popup-map" src="' + mapEmbedSrc + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Map showing ' + fullAddress + '"></iframe>' +
+				'</span>' +
+				'<span class="site-info__popup-label">Exact location</span>' +
+				'<span class="site-info__popup-text">' + fullAddress + '</span>' +
+			'</span>'
+		);
+
+		$icon.on('click keydown', function(e){
+			if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') {
+				return;
+			}
+
+			e.preventDefault();
+			e.stopPropagation();
+
+			var isOpen = $item.hasClass('is-popup-open');
+			$('.header .site-info__item--has-popup').removeClass('is-popup-open')
+				.find('.pe-7s-map-marker[aria-expanded="true"]').attr('aria-expanded', 'false');
+
+			if (!isOpen) {
+				$item.addClass('is-popup-open');
+				$icon.attr('aria-expanded', 'true');
+			}
+		});
+	});
+
+	$body.on('click', function(e){
+		if (!$(e.target).closest('.header .site-info__item--has-popup').length) {
+			$('.header .site-info__item--has-popup').removeClass('is-popup-open')
+				.find('.pe-7s-map-marker[aria-expanded="true"]').attr('aria-expanded', 'false');
+		}
+	});
 
 
 	/**********************

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Sanders - Trusted Finance and Business Bootstrap 5 Template</title>
+    <title>Gallery</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicons -->
@@ -28,6 +28,50 @@
     <!-- Style customizer (Remove these two lines please) -->
     <link rel="stylesheet" href="assets/css/style-customizer.css">
     <link href="assets/css/blank.css" data-style="styles" rel="stylesheet">
+
+    <style>
+        .gallery-area {
+            padding: 70px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .gallery-item {
+            display: block;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #f4f6fa;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 991px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 575px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -163,7 +207,7 @@
                                             </li>
 
                                             <li class="mainmenu__item menu-item-has-children">
-                                                <a href="news-details-gallery.html" class="mainmenu__link">
+                                                <a href="gallery.html" class="mainmenu__link">
                                                     <span data-hover="Gallery" class="mm-text">Gallery </span>
                                                 </a>
                                                 
@@ -219,7 +263,7 @@
                                 </ul>
                             </li>
                             <li><a href="our-services.html"><span class="mm-text">Services</span></a></li>
-                            <li><a href="news.html"><span class="mm-text">News</span></a></li>
+                            <li><a href="gallery.html"><span class="mm-text">Gallery</span></a></li>
                             <li><a href="careers.html"><span class="mm-text">Careers</span></a></li>
                             <li><a href="contact-us.html"><span class="mm-text">Contact Us</span></a></li>
                         </ul>
@@ -274,7 +318,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="page-title">Our Services 02</h1>
+                        <h1 class="page-title">Gallery</h1>
                     </div>
                 </div>
             </div>
@@ -282,111 +326,73 @@
         <!-- Page Title Area End -->
 
         <!-- Breadcrumb Area Start -->
-        <div class="breadcrumb-area mb--60">
+        <div class="breadcrumb-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <ul class="breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li class="current"><span>Our Services 02</span></li>
+                            <li class="current"><span>Gallery</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Breadcrumb Area End -->
-        
-        <!-- Main Content Wrapper Start -->
+        <!-- Breadcrumb Area End -->        <!-- Main Content Wrapper Start -->
         <div class="main-content-wrapper">
-            <!-- Services Area Start -->
-            <div class="services-area">
+            <section class="gallery-area">
                 <div class="container">
-                    <div class="row mb--20">
-                        <div class="col-md-6 mb--40">
-                            <div class="services-item-4">
-                                <div class="services-item__icon">
-                                    <div class="icon icon-rounded icon-big">
-                                        <i class="pe-7s-culture bg--primary"></i>
-                                    </div>
-                                </div>
-                                <div class="services-item__info">
-                                    <h2 class="services-item__title"><a href="">Accumulation</a></h2>
-                                    <p class="services-item__desc">Accumulation planning addresses an individual's investment needs, asset allocation, and the suitability of different types of securities in light of your goals.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb--40">
-                            <div class="services-item-4">
-                                <div class="services-item__icon">
-                                    <div class="icon icon-rounded icon-big">
-                                        <i class="pe-7s-note2 bg--primary"></i>
-                                    </div>
-                                </div>
-                                <div class="services-item__info">
-                                    <h2 class="services-item__title"><a href="">Taxation</a></h2>
-                                    <p class="services-item__desc">Tax planning considers the tax implications of individual, investment, or business decisions, usually with the goal of minimizing tax liability.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb--40">
-                            <div class="services-item-4">
-                                <div class="services-item__icon">
-                                    <div class="icon icon-rounded icon-big">
-                                        <i class="pe-7s-door-lock bg--primary"></i>
-                                    </div>
-                                </div>
-                                <div class="services-item__info">
-                                    <h2 class="services-item__title"><a href="">Business Planning</a></h2>
-                                    <p class="services-item__desc">Business planning focuses on issues specific to business owners and shareholders. For business owners, the business is their most significant asset.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb--40">
-                            <div class="services-item-4">
-                                <div class="services-item__icon">
-                                    <div class="icon icon-rounded icon-big">
-                                        <i class="pe-7s-display2 bg--primary"></i>
-                                    </div>
-                                </div>
-                                <div class="services-item__info">
-                                    <h2 class="services-item__title"><a href="">Retirement Planning</a></h2>
-                                    <p class="services-item__desc">Retirement planning involves evaluating your current financial standing and creating an accumulation strategy helping to ensure a desired retirement lifestyle.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb--40">
-                            <div class="services-item-4">
-                                <div class="services-item__icon">
-                                    <div class="icon icon-rounded icon-big">
-                                        <i class="pe-7s-news-paper bg--primary"></i>
-                                    </div>
-                                </div>
-                                <div class="services-item__info">
-                                    <h2 class="services-item__title"><a href="">Risk Management</a></h2>
-                                    <p class="services-item__desc">Risk management is intended to manage financial and other losses potentially associated with risks to your assets, business, or health.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb--40">
-                            <div class="services-item-4">
-                                <div class="services-item__icon">
-                                    <div class="icon icon-rounded icon-big">
-                                        <i class="pe-7s-global bg--primary"></i>
-                                    </div>
-                                </div>
-                                <div class="services-item__info">
-                                    <h2 class="services-item__title"><a href="">Estate Planning</a></h2>
-                                    <p class="services-item__desc">Estate planning creates a master plan for the management of your property during life and the distribution of that property at death.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="gallery-grid">
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-01.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-01.jpeg" alt="CDFF gallery image 01">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-02.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-02.jpeg" alt="CDFF gallery image 02">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-03.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-03.jpeg" alt="CDFF gallery image 03">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-04.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-04.jpeg" alt="CDFF gallery image 04">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-05.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-05.jpeg" alt="CDFF gallery image 05">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-06.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-06.jpeg" alt="CDFF gallery image 06">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-07.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-07.jpeg" alt="CDFF gallery image 07">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-08.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-08.jpeg" alt="CDFF gallery image 08">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-09.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-09.jpeg" alt="CDFF gallery image 09">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-10.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-10.jpeg" alt="CDFF gallery image 10">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-11.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-11.jpeg" alt="CDFF gallery image 11">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-12.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-12.jpeg" alt="CDFF gallery image 12">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-13.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-13.jpeg" alt="CDFF gallery image 13">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-14.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-14.jpeg" alt="CDFF gallery image 14">
+                        </a>
+                        <a class="gallery-item" href="assets/img/gallery/gallery-img-15.jpeg" target="_blank" rel="noopener">
+                            <img src="assets/img/gallery/gallery-img-15.jpeg" alt="CDFF gallery image 15">
+                        </a>
                     </div>
                 </div>
-            </div>
-            <!-- Services Area End -->
+            </section>
         </div>
         <!-- Main Content Wrapper End -->
-
         <!-- Footer Start-->
         <footer class="footer">
             <div class="footer-top border-bottom-2 pt--70 pt-md--85 pb--45 pb-lg--40 pb-md--65">
@@ -401,8 +407,8 @@
                                     <p class="mb--40">CDFF is one of the world’s leading financial Service providor.</p>
                                     <p><i class="fa fa-map-marker"></i>No.667, Colombo Road,Ja-Ela, Sri Lanka</p>
                                     <p><i class="fa fa-phone"></i>(+94) 117 111 112</p>
-                                    <p><i class="fa fa-envelope"></i><a href="maito:info@cdff.lk">info@cdff.lk</a></p>
-                                    <p><i class="fa fa-desktop"></i><a href="www.cdff.lk">www.cdff.lk</a></p>
+                                    <p><i class="fa fa-envelope"></i><a href="mailto:info@cdff.lk">info@cdff.lk</a></p>
+                                    <p><i class="fa fa-desktop"></i><a href="https://www.cdff.lk">www.cdff.lk</a></p>
                                 </div>
                             </div>
                         </div>

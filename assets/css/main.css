@@ -586,6 +586,83 @@ a, a:hover, a:focus, a:active, button, button:focus, input, select, textarea, .s
 .site-info__item i {
   font-size: 36px;
 }
+.site-info__item--has-popup {
+  cursor: default;
+}
+.site-info__item--has-popup:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  content: "";
+}
+.site-info__popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  width: 320px;
+  max-width: min(320px, 100vw - 32px);
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid rgba(34, 24, 21, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
+  color: #444444;
+  line-height: 1.6;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  transform: translate(-50%, 10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 10;
+}
+.site-info__popup:before {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(34, 24, 21, 0.12);
+  border-left: 1px solid rgba(34, 24, 21, 0.12);
+  content: "";
+  transform: translateX(-50%) rotate(45deg);
+}
+.site-info__popup-map-wrap {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eef2f6;
+}
+.site-info__popup-map {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+  pointer-events: auto;
+}
+.site-info__popup-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #221815;
+}
+.site-info__popup-text {
+  display: block;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #222222;
+}
+.site-info__item--has-popup:hover .site-info__popup, .site-info__item--has-popup.is-popup-open .site-info__popup, .site-info__item--has-popup:focus-within .site-info__popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
 .site-info__title {
   font-weight: 600;
 }
@@ -610,6 +687,19 @@ a, a:hover, a:focus, a:active, button, button:focus, input, select, textarea, .s
   font-size: 18px;
   padding-right: 3px;
 }
+.site-info.vertical .site-info__popup {
+  left: 0;
+  max-width: calc(100vw - 48px);
+  transform: translateY(10px);
+}
+.site-info.vertical .site-info__popup:before {
+  left: 28px;
+  transform: rotate(45deg);
+}
+.site-info.vertical .site-info__item--has-popup.is-popup-open .site-info__popup, .site-info.vertical .site-info__item--has-popup:hover .site-info__popup, .site-info.vertical .site-info__item--has-popup:focus-within .site-info__popup {
+  transform: translateY(0);
+}
+
 /*****************************
 11 - Layout - Footer
 *****************************/
@@ -5675,7 +5765,7 @@ Bootstrap Dropdown
   content: "";
 }
 
-.opacity-bg, .site-info__item, .accordion-2 .accordion-button, .award-item, .mini-blog__thumbnail, .mini-blog-style-3 .mini-blog__date, .post__thumbnail, .fp-element-carousel, .comment .single-comment, .newsletter, .searchform-2, .searchform-3, .icon, .product-modal .product-image, .popup-search__body, .main-navigation .mainmenu__item.menu-item-has-children > a, .main-navigation .mainmenu__item.menu-item-has-children ul li.menu-item-has-children > a, .offcanvas-navigation .offcanvas-menu > li > a span, .offcanvas-navigation .offcanvas-menu li, .product-thumbnail, .product-summary .product-large-image, .skill-progress__item, .project-item__thumbnail, .project-item-2 .project-item__title a, .product-reviews .review__item, .services-item__thumbnail, .services-item__info, .services-item-3 .services-item__icon, .services-item-4, .services-item-5, .team-member__inner, .team-member__thumbnail, .testimonial__text, .testimonial-style-2 .testimonial__info, .testimonial-style-4 .testimonial__info, .timeline__item, .checkout-title h2, .image-with-video-btn, .callback-box, .quantity, .page-title-area, .breadcrumb li, .fp-video, .video-popup, .scroll-to-top i, .scroll-to-top i:before, .wrapper {
+.opacity-bg, .site-info__item, .site-info__item--has-popup .site-info__content, .accordion-2 .accordion-button, .award-item, .mini-blog__thumbnail, .mini-blog-style-3 .mini-blog__date, .post__thumbnail, .fp-element-carousel, .comment .single-comment, .newsletter, .searchform-2, .searchform-3, .icon, .product-modal .product-image, .popup-search__body, .main-navigation .mainmenu__item.menu-item-has-children > a, .main-navigation .mainmenu__item.menu-item-has-children ul li.menu-item-has-children > a, .offcanvas-navigation .offcanvas-menu > li > a span, .offcanvas-navigation .offcanvas-menu li, .product-thumbnail, .product-summary .product-large-image, .skill-progress__item, .project-item__thumbnail, .project-item-2 .project-item__title a, .product-reviews .review__item, .services-item__thumbnail, .services-item__info, .services-item-3 .services-item__icon, .services-item-4, .services-item-5, .team-member__inner, .team-member__thumbnail, .testimonial__text, .testimonial-style-2 .testimonial__info, .testimonial-style-4 .testimonial__info, .timeline__item, .checkout-title h2, .image-with-video-btn, .callback-box, .quantity, .page-title-area, .breadcrumb li, .fp-video, .video-popup, .scroll-to-top i, .scroll-to-top i:before, .wrapper {
   position: relative;
 }
 
@@ -19872,3 +19962,5 @@ a, button, .slick-btn, .slick-arrow, .slick-dots li button, .form__input, .icon-
 .bd-color--primary {
   border-color: #3768b4;
 }
+
+/*# sourceMappingURL=main.css.map */
